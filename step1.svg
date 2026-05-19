@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <rect width="240" height="160" rx="12" fill="#eff6ff"/>
+  <!-- Form-like illustration -->
+  <rect x="20" y="18" width="200" height="124" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+  <!-- Form title -->
+  <rect x="36" y="30" width="90" height="9" rx="3" fill="#1e3560"/>
+  <!-- Form field 1 -->
+  <rect x="36" y="48" width="60" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="36" y="58" width="168" height="18" rx="6" fill="#f8fafc" stroke="#bfdbfe" stroke-width="1.5"/>
+  <!-- Form field 2 -->
+  <rect x="36" y="84" width="50" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="36" y="94" width="168" height="18" rx="6" fill="#f8fafc" stroke="#bfdbfe" stroke-width="1.5"/>
+  <!-- Submit button -->
+  <rect x="36" y="120" width="80" height="14" rx="7" fill="#1a56db"/>
+  <!-- Pencil icon -->
+  <g transform="translate(170,38) rotate(30)">
+    <rect x="-4" y="-12" width="8" height="20" rx="2" fill="#f59e0b"/>
+    <polygon points="-4,8 4,8 0,14" fill="#f59e0b"/>
+    <rect x="-4" y="-12" width="8" height="5" rx="2" fill="#334155"/>
+  </g>
+</svg>

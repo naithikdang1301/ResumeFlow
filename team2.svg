@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="60" fill="#fce7f3"/>
+  <!-- Body -->
+  <ellipse cx="60" cy="105" rx="34" ry="22" fill="#db2777"/>
+  <!-- Neck -->
+  <rect x="52" y="78" width="16" height="14" rx="4" fill="#fcd9a0"/>
+  <!-- Head -->
+  <circle cx="60" cy="68" r="22" fill="#fcd9a0"/>
+  <!-- Hair — longer, wavy -->
+  <ellipse cx="60" cy="48" rx="22" ry="12" fill="#92400e"/>
+  <rect x="38" y="48" width="8" height="30" rx="4" fill="#92400e"/>
+  <rect x="74" y="48" width="8" height="30" rx="4" fill="#92400e"/>
+  <!-- Eyes with lashes -->
+  <circle cx="53" cy="67" r="3.5" fill="#334155"/>
+  <circle cx="67" cy="67" r="3.5" fill="#334155"/>
+  <circle cx="54" cy="66" r="1.2" fill="white"/>
+  <circle cx="68" cy="66" r="1.2" fill="white"/>
+  <!-- Smile -->
+  <path d="M53 76 Q60 83 67 76" fill="none" stroke="#c2855a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Palette icon on body -->
+  <circle cx="55" cy="98" r="7" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="65" cy="98" r="7" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="60" cy="93" r="5" fill="rgba(255,255,255,0.3)"/>
+</svg>

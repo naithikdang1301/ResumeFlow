@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard – Resume Flow</title>
+  <meta name="description" content="Manage your resumes, track ATS scores, and build new resumes from your personal dashboard.">
+  <meta name="theme-color" content="#6d28d9">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-cb">
+    <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial;">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="9" fill="url(#logo-grad-nav)" />
+        <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <defs>
+          <linearGradient id="logo-grad-nav" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a855f7" />
+            <stop offset="1" stop-color="#6366f1" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #1e1b4b; letter-spacing: -0.5px; display: flex; align-items: center;">
+        Resume<span style="color: #6d28d9; margin-left: 1px;">Flow</span>
+      </span>
+    </a>
+    <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learn-ats.html">Learn ATS</a></li>
+      <li><a href="templates.html">Templates</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="login.html" id="navLoginLink">Login</a>
+      <li><a href="#" id="navLogoutLink" style="display:none" onclick="logoutUser()">Logout</a></li>
+      <li><a href="build-resume.html" class="nav-cta">Build Resume</a></li>
+    </ul>
+  </nav>
+
+  <div class="dashboard-wrap">
+
+    <input type="radio" name="dash-tab" id="tab-resumes"  class="dash-radio" checked>
+    <input type="radio" name="dash-tab" id="tab-create"   class="dash-radio">
+    <input type="radio" name="dash-tab" id="tab-account"  class="dash-radio">
+    <input type="radio" name="dash-tab" id="tab-settings" class="dash-radio">
+
+    <aside class="dash-sidebar">
+      <div class="dash-user-box">
+        <div class="dash-avatar">👤</div>
+        <p class="dash-username">Arjun Sharma</p>
+        <span class="dash-plan-badge">Free Plan</span>
+      </div>
+      <nav class="dash-nav">
+        <label for="tab-resumes"  class="dash-link">📄 My Resumes</label>
+        <label for="tab-create"   class="dash-link">➕ Create New</label>
+        <label for="tab-account"  class="dash-link">👤 Account Info</label>
+        <label for="tab-settings" class="dash-link">⚙️ Settings</label>
+        <a href="build-resume.html" class="dash-link">🔧 Resume Builder</a>
+        <a href="#" class="dash-link" id="logoutBtn" data-action="logout" onclick="logoutUser();return false;">🚪 Logout</a>
+      </nav>
+      <div class="dash-upgrade-box">
+        <p>🚀 Unlock 5 resumes &amp; all templates</p>
+        <a href="pricing.html" class="btn-upgrade">Upgrade to Student Plan</a>
+      </div>
+    </aside>
+
+    <main class="dash-main">
+
+      <div class="dash-panel" id="panel-resumes">
+
+        <div class="dash-greeting" role="heading" aria-level="2">Welcome back!</div>
+        <p class="dash-greeting-sub">Here's what's happening with your resume today.</p>
+        <div class="dash-panel-header">
+          <h2>📄 My Resumes</h2>
+          <a href="build-resume.html" class="btn-primary small">+ Create New</a>
+        </div>
+
+        <div class="dash-stats-row">
+          <div class="dash-stat-box"><span class="dsb-num" id="stat-resumes">1</span><span class="dsb-lbl">Resumes</span></div>
+          <div class="dash-stat-box"><span class="dsb-num" id="stat-limit">1/1</span><span class="dsb-lbl">Plan Limit</span></div>
+          <div class="dash-stat-box"><span class="dsb-num" id="stat-downloads">0</span><span class="dsb-lbl">Downloads</span></div>
+          <div class="dash-stat-box"><span class="dsb-num" id="stat-ats">0%</span><span class="dsb-lbl">ATS Score</span></div>
+        </div>
+
+        <div class="resume-card-list" id="resumeCardList">
+          <div class="resume-card-row">
+            <div class="rc-file-icon">📄</div>
+            <div class="rc-info">
+              <h4>My Main Resume</h4>
+              <p>Last edited: 20 Dec 2024 &nbsp;·&nbsp; Template: Classic Clean &nbsp;·&nbsp; ATS Score: 85%</p>
+            </div>
+            <div class="rc-actions">
+              <a href="build-resume.html" class="act-btn edit-act">✏️ Edit</a>
+              <a href="#" class="act-btn dl-act" data-action="download" onclick="downloadResume()">⬇️ Download</a>
+              <a href="#" class="act-btn del-act" data-action="delete" onclick="confirmDelete(); return false;">🗑️ Delete</a>
+            </div>
+          </div>
+          <div class="resume-card-row dashed-card">
+            <div class="rc-file-icon">➕</div>
+            <div class="rc-info">
+              <h4>Create another resume</h4>
+              <p>Upgrade to Student Plan to save up to 5 resumes</p>
+            </div>
+            <div class="rc-actions">
+              <a href="pricing.html" class="act-btn upgrade-act">Upgrade Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="ats-tips-row">
+          <h3>💡 Tips to Improve Your Resume</h3>
+          <div class="quick-tips-grid">
+            <div class="quick-tip">
+              <span class="qt-icon">🔑</span>
+              <p>Add more keywords from job descriptions to boost your ATS score above 90%</p>
+            </div>
+            <div class="quick-tip">
+              <span class="qt-icon">📏</span>
+              <p>Keep it to 1 page since you have less than 2 years of experience</p>
+            </div>
+            <div class="quick-tip">
+              <span class="qt-icon">📧</span>
+              <p>Use a professional email like firstname.lastname@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="usage-section">
+          <div class="usage-header">
+            <h3>Plan Usage</h3>
+            <a href="pricing.html" class="upgrade-link-small">Upgrade for more →</a>
+          </div>
+          <div class="usage-row-label"><span>Resumes Created</span><span id="usage-text">1 out of 1</span></div>
+          <div class="usage-bar-bg"><div class="usage-bar-fill" id="usage-bar" style="width:100%;"></div></div>
+          <p class="usage-note" id="usage-note">⚠️ Free plan limit reached. <a href="pricing.html">Upgrade</a> to create more.</p>
+        </div>
+
+        <div class="activity-section">
+          <h3>📅 Recent Activity</h3>
+          <div class="activity-list" id="activityList">
+            <!-- Loaded dynamically -->
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dash-panel" id="panel-create">
+
+        <div class="dash-panel-header"><h2>➕ Create New Resume</h2></div>
+        <p class="dash-intro-text">Start fresh or use a template to get your resume ready quickly.</p>
+
+        <div class="create-options-grid">
+          <div class="create-opt-card">
+            <div class="co-icon">📝</div>
+            <h3>Blank Resume</h3>
+            <p>Start with an empty form and fill in every section step by step.</p>
+            <a href="build-resume.html" class="btn-primary">Start Blank</a>
+          </div>
+          <div class="create-opt-card featured-opt">
+            <div class="co-icon">🎨</div>
+            <h3>Use a Template</h3>
+            <p>Pick a professional ATS-approved template and fill in your details quickly.</p>
+            <a href="templates.html" class="btn-primary">Browse Templates</a>
+          </div>
+          <div class="create-opt-card">
+            <div class="co-icon">📋</div>
+            <h3>Copy Existing</h3>
+            <p>Duplicate your current resume and tweak it for a different job application.</p>
+            <a href="pricing.html" class="btn-ghost">Upgrade to Unlock</a>
+          </div>
+        </div>
+
+        <div class="checklist-section">
+          <h3>✅ Resume Checklist — Before You Submit</h3>
+          <div class="checklist-grid">
+            <label class="check-item"><input type="checkbox"> Full name and contact details are correct</label>
+            <label class="check-item"><input type="checkbox"> Added keywords from the job description</label>
+            <label class="check-item"><input type="checkbox"> Education section is complete with CGPA</label>
+            <label class="check-item"><input type="checkbox"> At least 2 projects with descriptions</label>
+            <label class="check-item"><input type="checkbox"> Technical skills are clearly listed</label>
+            <label class="check-item"><input type="checkbox"> Resume is 1 page (for freshers)</label>
+            <label class="check-item"><input type="checkbox"> Proofread for spelling mistakes</label>
+            <label class="check-item"><input type="checkbox"> Saved as PDF before sending</label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dash-panel" id="panel-account">
+
+        <div class="dash-panel-header"><h2>👤 Account Info</h2></div>
+
+        <div class="profile-summary-card">
+          <div class="profile-big-avatar">👤</div>
+          <div class="profile-summary-info">
+            <h3 id="acc-sum-name">Arjun Sharma</h3>
+            <p id="acc-sum-contact">arjun@example.com &nbsp;·&nbsp; +91 98765 43210</p>
+            <p>ABC Institute of Technology &nbsp;·&nbsp; B.Tech CSE &nbsp;·&nbsp; 2025</p>
+            <span class="plan-chip">Free Plan</span>
+            <a href="pricing.html" class="upgrade-chip">Upgrade →</a>
+          </div>
+        </div>
+
+        <div class="account-table">
+          <div class="acc-row"><span class="acc-label">Full Name</span><span class="acc-value" id="acc-tbl-name">Arjun Sharma</span></div>
+          <div class="acc-row"><span class="acc-label">Email Address</span><span class="acc-value" id="acc-tbl-email">arjun@example.com</span></div>
+          <div class="acc-row"><span class="acc-label">Phone Number</span><span class="acc-value" id="acc-tbl-phone">+91 98765 43210</span></div>
+          <div class="acc-row"><span class="acc-label">College</span><span class="acc-value">ABC Institute of Technology</span></div>
+          <div class="acc-row"><span class="acc-label">Degree</span><span class="acc-value">B.Tech in Computer Science — 2025</span></div>
+          <div class="acc-row"><span class="acc-label">Current Plan</span><span class="acc-value">Free Plan &nbsp;<a href="pricing.html" class="inline-link">Upgrade →</a></span></div>
+          <div class="acc-row"><span class="acc-label">Member Since</span><span class="acc-value">December 2024</span></div>
+        </div>
+
+        <div class="edit-profile-section">
+          <h3>Edit Profile</h3>
+          <form class="edit-form" action="#" method="get">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="edit-name">Full Name</label>
+                <input type="text" id="edit-name" value="Arjun Sharma">
+              </div>
+              <div class="form-group">
+                <label for="edit-phone">Phone Number</label>
+                <input type="tel" id="edit-phone" value="+91 98765 43210">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="edit-email">Email Address</label>
+              <input type="email" id="edit-email" value="arjun@example.com">
+            </div>
+            <div class="form-group">
+              <label for="edit-college">College / University</label>
+              <input type="text" id="edit-college" value="ABC Institute of Technology">
+            </div>
+            <button type="submit" class="btn-primary">Save Changes</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="dash-panel" id="panel-settings">
+
+        <div class="dash-panel-header"><h2>⚙️ Settings</h2></div>
+
+        <div class="settings-group">
+          <h3 class="settings-group-title">🔔 Notifications</h3>
+          <div class="settings-list">
+            <div class="setting-row">
+              <div class="setting-text"><h4>Email Notifications</h4><p>Receive news, tips, and updates about resume building</p></div>
+              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-track"></span></label>
+            </div>
+            <div class="setting-row">
+              <div class="setting-text"><h4>Weekly Resume Tips</h4><p>Get a weekly email with tips to improve your resume</p></div>
+              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-track"></span></label>
+            </div>
+            <div class="setting-row">
+              <div class="setting-text"><h4>Job Alerts</h4><p>Get notified when job opportunities match your profile</p></div>
+              <label class="toggle-switch"><input type="checkbox"><span class="toggle-track"></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h3 class="settings-group-title">🔒 Privacy</h3>
+          <div class="settings-list">
+            <div class="setting-row">
+              <div class="setting-text"><h4>Profile Visibility</h4><p>Allow recruiters to search and find your profile</p></div>
+              <label class="toggle-switch"><input type="checkbox"><span class="toggle-track"></span></label>
+            </div>
+            <div class="setting-row">
+              <div class="setting-text"><h4>Data Analytics</h4><p>Allow anonymous data to help improve the service</p></div>
+              <label class="toggle-switch"><input type="checkbox" checked><span class="toggle-track"></span></label>
+            </div>
+          </div>
+        </div>
+
+        <div class="settings-group">
+          <h3 class="settings-group-title">🔑 Change Password</h3>
+          <form class="edit-form" action="#" method="get">
+            <div class="form-group">
+              <label for="old-pass">Current Password</label>
+              <input type="password" id="old-pass" placeholder="Enter current password">
+            </div>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="new-pass">New Password</label>
+                <input type="password" id="new-pass" placeholder="New password">
+              </div>
+              <div class="form-group">
+                <label for="confirm-pass">Confirm Password</label>
+                <input type="password" id="confirm-pass" placeholder="Repeat new password">
+              </div>
+            </div>
+            <button type="submit" class="btn-primary">Update Password</button>
+          </form>
+        </div>
+
+        <div class="danger-zone">
+          <h3>⚠️ Danger Zone</h3>
+          <p>Permanently delete your account and all your resumes. This cannot be undone.</p>
+          <a href="mailto:hello@smartresumebuilder.in?subject=Delete Account Request" class="danger-btn">Request Account Deletion</a>
+        </div>
+
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="9" fill="url(#logo-grad-foot)" />
+            <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="logo-grad-foot" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a855f7" />
+                <stop offset="1" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; letter-spacing: -0.5px;">
+            Resume<span style="color: #a855f7; margin-left: 1px;">Flow</span>
+          </span>
+        </div>
+        <p>Helping Indian students build job-winning resumes since 2024.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a><a href="learn-ats.html">Learn ATS</a><a href="templates.html">Templates</a>
+        <a href="pricing.html">Pricing</a><a href="about.html">About</a><a href="build-resume.html">Build Resume</a>
+      </div>
+      <div class="footer-links-group"><h4>Contact</h4><span>hello@smartresumebuilder.in</span><span>+91 98765 43210</span><span>India (Remote Team)</span></div>
+    </div>
+    <div class="footer-bottom"><p>© 2024 Resume Flow · Made with ❤️ for Students &amp; Freshers in India</p></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

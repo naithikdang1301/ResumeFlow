@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login / Sign Up – Resume Flow</title>
+  <meta name="description" content="Login or create a free account to build and save your professional resume.">
+  <meta name="theme-color" content="#6d28d9">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="login-page-wrap">
+    <div class="login-container">
+
+      <div class="login-left">
+        <div class="login-left-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial; font-size: 22px; font-weight: 700; color: #ffffff; margin-bottom: 24px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="9" fill="url(#logo-grad-login)" />
+            <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="logo-grad-login" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a855f7" />
+                <stop offset="1" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>Resume<span style="color: #a855f7; margin-left: 1px;">Flow</span></span>
+        </div>
+        <h2>Land your dream job with a perfect resume</h2>
+        <p>Join 50,000+ students who already built job-winning resumes with our platform — free to start, no design skills needed.</p>
+        <div class="login-features">
+          <div class="login-feat">
+            <div class="login-feat-icon">🎯</div>
+            <span>ATS-Optimized templates that pass company filters</span>
+          </div>
+          <div class="login-feat">
+            <div class="login-feat-icon">⚡</div>
+            <span>Build a professional resume in under 10 minutes</span>
+          </div>
+          <div class="login-feat">
+            <div class="login-feat-icon">📊</div>
+            <span>Real-time ATS score checker with improvement tips</span>
+          </div>
+          <div class="login-feat">
+            <div class="login-feat-icon">🆓</div>
+            <span>Free plan with 1 resume and PDF download forever</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-right" role="main">
+        <h3>Welcome back 👋</h3>
+        <p class="login-sub">Sign in to your account or create a new one</p>
+
+        <div class="login-tabs">
+          <button class="login-tab active" id="tabLogin">Log In</button>
+          <button class="login-tab" id="tabSignup">Sign Up</button>
+        </div>
+
+        <form class="login-form" id="loginForm" novalidate>
+          <div class="form-field">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" id="loginEmail" aria-required="true" autocomplete="email" placeholder="you@example.com" autocomplete="email">
+            <span class="field-error" id="loginEmailErr"></span>
+          </div>
+          <div class="form-field">
+            <label for="loginPw">Password</label>
+            <div class="password-wrap">
+              <input type="password" id="loginPw" aria-required="true" placeholder="Your password" autocomplete="current-password">
+              <button type="button" class="toggle-pw" title="Show/Hide password">👁️</button>
+            </div>
+            <span class="field-error" id="loginPwErr"></span>
+          </div>
+          <div class="remember-row">
+            <label><input type="checkbox" id="rememberMe"> Remember me</label>
+            <a href="#" class="forgot-link" id="forgotPwLink">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn-login">Log In →</button>
+          <p class="switch-form">Don't have an account? <a href="#" onclick="document.getElementById('tabSignup').click();return false;">Sign up free</a></p>
+        </form>
+
+        <form class="login-form" id="signupForm" novalidate style="display:none;">
+          <div class="form-field">
+            <label for="signupName">Full Name *</label>
+            <input type="text" id="signupName" placeholder="e.g. Arjun Sharma" autocomplete="name">
+            <span class="field-error" id="signupNameErr"></span>
+          </div>
+          <div class="form-field">
+            <label for="signupEmail">Email Address *</label>
+            <input type="email" id="signupEmail" placeholder="you@example.com" autocomplete="email">
+            <span class="field-error" id="signupEmailErr"></span>
+          </div>
+          <div class="form-field">
+            <label for="signupPhone">Phone Number * <small class="input-hint">(10 digits only)</small></label>
+            <input type="tel" id="signupPhone" placeholder="9876543210" maxlength="10" pattern="[0-9]{10}" inputmode="numeric">
+            <span class="field-error" id="signupPhoneErr"></span>
+          </div>
+          <div class="form-field">
+            <label for="signupPw">Password * <small class="input-hint">(min. 8 characters)</small></label>
+            <div class="password-wrap">
+              <input type="password" id="signupPw" placeholder="Create a strong password" autocomplete="new-password">
+              <button type="button" class="toggle-pw" title="Show/Hide password">👁️</button>
+            </div>
+            <div class="login-strength"><div class="login-strength-bar" id="strengthBar"></div></div>
+            <span id="strengthLabel" aria-live="polite"></span>
+            <span class="field-error" id="signupPwErr"></span>
+          </div>
+          <button type="submit" class="btn-login">Create Account →</button>
+          <p class="switch-form">Already have an account? <a href="#" onclick="document.getElementById('tabLogin').click();return false;">Log in</a></p>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

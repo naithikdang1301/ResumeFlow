@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pricing - Resume Flow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-cb">
+    <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial;">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="9" fill="url(#logo-grad-nav)" />
+        <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <defs>
+          <linearGradient id="logo-grad-nav" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a855f7" />
+            <stop offset="1" stop-color="#6366f1" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #1e1b4b; letter-spacing: -0.5px; display: flex; align-items: center;">
+        Resume<span style="color: #6d28d9; margin-left: 1px;">Flow</span>
+      </span>
+    </a>
+    <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learn-ats.html">Learn ATS</a></li>
+      <li><a href="templates.html">Templates</a></li>
+      <li><a href="pricing.html" class="active">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="login.html" id="navLoginLink">Login</a></li>
+      <li><a href="#" id="navLogoutLink" style="display:none" onclick="logoutUser();return false;">Logout</a></li>
+      <li><a href="build-resume.html" class="nav-cta">Build Resume</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <h1>💰 Simple Pricing</h1>
+    <p>Transparent and affordable plans made for Indian students</p>
+  </section>
+
+  <section class="section" id="main-content" role="main" white-section">
+    <h2 class="section-title">Choose Your Plan</h2>
+    <p class="section-sub">Start free. Upgrade only when you need more.</p>
+
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <div class="plan-top">
+          <div class="plan-emoji">🆓</div>
+          <h3 class="plan-name">Free Plan</h3>
+          <p class="plan-tag">Perfect to get started</p>
+        </div>
+
+        <div class="price-box">
+          <span class="price-amount">₹0</span>
+          <span class="price-when">forever</span>
+        </div>
+
+        <ul class="plan-features">
+          <li class="feat-yes">✅ 1 Resume</li>
+          <li class="feat-yes">✅ 2 Basic Templates</li>
+          <li class="feat-yes">✅ PDF Download</li>
+          <li class="feat-yes">✅ ATS Tips Guide</li>
+          <li class="feat-no">❌ All Templates</li>
+          <li class="feat-no">❌ Multiple Resumes</li>
+          <li class="feat-no">❌ ATS Score Checker</li>
+          <li class="feat-no">❌ Priority Support</li>
+        </ul>
+
+        <a href="build-resume.html" class="btn-outline full-btn">Get Started Free</a>
+      </div>
+
+      <div class="pricing-card popular-card">
+
+        <div class="popular-badge">⭐ Most Popular</div>
+
+        <div class="plan-top">
+          <div class="plan-emoji">🎓</div>
+          <h3 class="plan-name">Student Plan</h3>
+          <p class="plan-tag">Ideal for college students</p>
+        </div>
+
+        <div class="price-box">
+          <span class="price-amount">₹99</span>
+          <span class="price-when">/ month</span>
+        </div>
+
+        <ul class="plan-features">
+          <li class="feat-yes">✅ 5 Resumes</li>
+          <li class="feat-yes">✅ All Templates</li>
+          <li class="feat-yes">✅ PDF &amp; Word Download</li>
+          <li class="feat-yes">✅ ATS Score Checker</li>
+          <li class="feat-yes">✅ Email Support</li>
+          <li class="feat-no">❌ Custom Branding</li>
+          <li class="feat-no">❌ Priority Support</li>
+          <li class="feat-no">❌ LinkedIn Tips</li>
+        </ul>
+
+        <a href="build-resume.html" class="btn-primary full-btn">Choose Student Plan</a>
+      </div>
+
+      <div class="pricing-card">
+        <div class="plan-top">
+          <div class="plan-emoji">🚀</div>
+          <h3 class="plan-name">Pro Plan</h3>
+          <p class="plan-tag">For serious job seekers</p>
+        </div>
+
+        <div class="price-box">
+          <span class="price-amount">₹299</span>
+          <span class="price-when">/ month</span>
+        </div>
+
+        <ul class="plan-features">
+          <li class="feat-yes">✅ Unlimited Resumes</li>
+          <li class="feat-yes">✅ All Premium Templates</li>
+          <li class="feat-yes">✅ PDF, Word &amp; HTML</li>
+          <li class="feat-yes">✅ Advanced ATS Checker</li>
+          <li class="feat-yes">✅ LinkedIn Profile Tips</li>
+          <li class="feat-yes">✅ Custom Branding</li>
+          <li class="feat-yes">✅ Priority Support</li>
+          <li class="feat-yes">✅ Cover Letter Builder</li>
+        </ul>
+
+        <a href="build-resume.html" class="btn-outline full-btn">Choose Pro Plan</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section grey-section">
+    <h2 class="section-title">Full Feature Comparison</h2>
+
+    <div class="table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>Free</th>
+            <th class="highlight-col">Student</th>
+            <th>Pro</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Number of Resumes</td>
+            <td>1</td>
+            <td class="highlight-col">5</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <td>Resume Templates</td>
+            <td>2</td>
+            <td class="highlight-col">All 6</td>
+            <td>All + Premium</td>
+          </tr>
+          <tr>
+            <td>PDF Download</td>
+            <td>✅</td>
+            <td class="highlight-col">✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Word (.docx) Download</td>
+            <td>❌</td>
+            <td class="highlight-col">✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>ATS Score Checker</td>
+            <td>❌</td>
+            <td class="highlight-col">✅</td>
+            <td>✅ Advanced</td>
+          </tr>
+          <tr>
+            <td>Email Support</td>
+            <td>❌</td>
+            <td class="highlight-col">✅</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Priority Support</td>
+            <td>❌</td>
+            <td class="highlight-col">❌</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Custom Branding</td>
+            <td>❌</td>
+            <td class="highlight-col">❌</td>
+            <td>✅</td>
+          </tr>
+          <tr>
+            <td>Cover Letter Builder</td>
+            <td>❌</td>
+            <td class="highlight-col">❌</td>
+            <td>✅</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section white-section">
+    <h2 class="section-title">❓ Frequently Asked Questions</h2>
+
+    <div class="faq-list">
+
+      <details class="faq-item">
+        <summary class="faq-question">Can I use the Free plan forever?</summary>
+        <div class="faq-answer">
+          Yes! The Free plan never expires. You can create 1 resume and use 2 basic
+          templates forever without paying anything.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Can I cancel my plan anytime?</summary>
+        <div class="faq-answer">
+          Absolutely. You can cancel your Student or Pro plan at any time with no
+          cancellation fees. Your plan stays active till the end of the billing period.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Is there a student discount?</summary>
+        <div class="faq-answer">
+          Yes! The Student Plan is specially priced at just ₹99/month — keeping
+          Indian college students in mind. You can also save 20% by choosing yearly billing.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">What payment methods are accepted?</summary>
+        <div class="faq-answer">
+          We accept UPI, debit cards, credit cards, and net banking. All payments
+          are fully secure and encrypted. We use Razorpay for payment processing.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Are the templates really ATS-friendly?</summary>
+        <div class="faq-answer">
+          Yes. All templates are tested against major ATS systems including Workday,
+          Taleo, and Greenhouse. They use simple formatting and standard headings
+          that every ATS can read correctly.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary class="faq-question">Can I download my resume as a PDF?</summary>
+        <div class="faq-answer">
+          Yes. All plans — including the Free plan — allow PDF download.
+          The Student and Pro plans additionally allow Word (.docx) download.
+        </div>
+      </details>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Still not sure? Start with the Free Plan.</h2>
+    <p>No credit card. No commitment. Just build your resume.</p>
+    <a href="build-resume.html" class="btn-primary">Start for Free →</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="footer-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial; margin-bottom: 12px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="9" fill="url(#logo-grad-foot)" />
+            <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="logo-grad-foot" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a855f7" />
+                <stop offset="1" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; letter-spacing: -0.5px; display: flex; align-items: center;">
+            Resume<span style="color: #a855f7; margin-left: 1px;">Flow</span>
+          </span>
+        </div>
+        <p class="footer-about">Helping students and freshers build resumes that get noticed.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="learn-ats.html">Learn ATS</a>
+        <a href="templates.html">Templates</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="about.html">About Us</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="build-resume.html">Build Resume</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📧 hello@smartresume.in</p>
+        <p>📱 +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Resume Flow. Made with ❤️ for Indian Students.</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

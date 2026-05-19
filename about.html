@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Resume Flow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-cb">
+    <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial;">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="9" fill="url(#logo-grad-nav)" />
+        <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <defs>
+          <linearGradient id="logo-grad-nav" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a855f7" />
+            <stop offset="1" stop-color="#6366f1" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #1e1b4b; letter-spacing: -0.5px; display: flex; align-items: center;">
+        Resume<span style="color: #6d28d9; margin-left: 1px;">Flow</span>
+      </span>
+    </a>
+    <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learn-ats.html">Learn ATS</a></li>
+      <li><a href="templates.html">Templates</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html" class="active">About</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="login.html" id="navLoginLink">Login</a></li>
+      <li><a href="#" id="navLogoutLink" style="display:none" onclick="logoutUser();return false;">Logout</a></li>
+      <li><a href="build-resume.html" class="nav-cta">Build Resume</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <h1>👋 About Us</h1>
+    <p>Our mission, our team, and why we built Resume Flow</p>
+  </section>
+
+  <section class="section white-section" id="main-content" role="main">
+    <div class="two-col-layout">
+
+      <div class="two-col-text">
+        <h2>Our Mission</h2>
+        <p>
+          <strong>Resume Flow</strong> was created with one simple goal: to help
+          every student and fresher in India build a professional, job-ready resume —
+          without any technical knowledge or design experience.
+        </p>
+        <p>
+          Every year, millions of engineering and college graduates enter the job market.
+          Many lose great opportunities not because they lack skills, but because their
+          resume doesn't represent them well or gets rejected by ATS systems before
+          a human ever reads it.
+        </p>
+        <p>
+          We believe a great resume should be accessible to <strong>everyone</strong> —
+          not just people who can afford professional resume writers or have design skills.
+        </p>
+        <p>
+          That's why we built a platform that is simple, completely free to start, and
+          specifically designed for the Indian job market.
+        </p>
+      </div>
+
+      <div class="two-col-img">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 320" width="420" height="320">
+  <defs>
+    <filter id="sd"><feDropShadow dx="0" dy="5" stdDeviation="12" flood-opacity="0.1"/></filter>
+  </defs>
+  <rect width="420" height="320" rx="16" fill="#eff6ff"/>
+
+  <rect x="30" y="230" width="360" height="14" rx="4" fill="#e2e8f0"/>
+
+  <rect x="100" y="130" width="220" height="140" rx="8" fill="#334155" filter="url(#sd)"/>
+  
+  <rect x="110" y="140" width="200" height="115" rx="5" fill="#f8fafc"/>
+  
+  <rect x="120" y="148" width="180" height="4" rx="2" fill="#1a56db"/>
+  <rect x="120" y="157" width="110" height="7" rx="2" fill="#1e3560"/>
+  <rect x="120" y="169" width="80" height="5" rx="2" fill="#1a56db" opacity="0.6"/>
+  <rect x="120" y="180" width="180" height="1" fill="#e2e8f0"/>
+  <rect x="120" y="186" width="55" height="5" rx="2" fill="#1a56db"/>
+  <rect x="120" y="196" width="180" height="4" rx="2" fill="#cbd5e1"/>
+  <rect x="120" y="204" width="150" height="4" rx="2" fill="#cbd5e1"/>
+  <rect x="120" y="214" width="55" height="5" rx="2" fill="#1a56db"/>
+  <rect x="120" y="224" width="180" height="4" rx="2" fill="#cbd5e1"/>
+  <rect x="120" y="234" width="130" height="4" rx="2" fill="#cbd5e1"/>
+  
+  <rect x="100" y="266" width="220" height="8" rx="2" fill="#475569"/>
+  
+  <rect x="90" y="272" width="240" height="10" rx="4" fill="#334155"/>
+
+  <circle cx="70" cy="160" r="22" fill="#fde68a"/>
+  
+  <ellipse cx="70" cy="143" rx="22" ry="12" fill="#92400e"/>
+  
+  <circle cx="63" cy="160" r="3" fill="#334155"/>
+  <circle cx="77" cy="160" r="3" fill="#334155"/>
+  <path d="M63 170 Q70 177 77 170" fill="none" stroke="#334155" stroke-width="2" stroke-linecap="round"/>
+  
+  <rect x="44" y="182" width="52" height="70" rx="10" fill="#1a56db"/>
+  
+  <rect x="24" y="188" width="22" height="12" rx="6" fill="#fde68a"/>
+  <rect x="96" y="188" width="22" height="12" rx="6" fill="#fde68a"/>
+
+  <text x="30" y="100" font-family="sans-serif" font-size="20">⭐</text>
+  
+  <circle cx="360" cy="100" r="20" fill="#dcfce7" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="360" y="107" font-family="sans-serif" font-size="16" text-anchor="middle">✓</text>
+  
+  <text x="360" y="200" font-family="sans-serif" font-size="26">🏆</text>
+  
+  <text x="30" y="210" font-family="sans-serif" font-size="22">🚀</text>
+
+  <rect x="30" y="292" width="360" height="20" rx="8" fill="rgba(26,86,219,0.08)"/>
+  <rect x="44" y="298" width="70" height="8" rx="3" fill="#1a56db"/>
+  <rect x="126" y="298" width="1" height="8" fill="#bfdbfe"/>
+  <rect x="140" y="298" width="60" height="8" rx="3" fill="#1a56db"/>
+  <rect x="212" y="298" width="1" height="8" fill="#bfdbfe"/>
+  <rect x="226" y="298" width="50" height="8" rx="3" fill="#1a56db"/>
+  <rect x="288" y="298" width="1" height="8" fill="#bfdbfe"/>
+  <rect x="302" y="298" width="55" height="8" rx="3" fill="#1a56db"/>
+</svg>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="stats-section">
+    <div class="stats-grid">
+
+      <div class="stat-item">
+        <p class="stat-num">50,000+</p>
+        <p class="stat-label">Resumes Created</p>
+      </div>
+
+      <div class="stat-item">
+        <p class="stat-num">10,000+</p>
+        <p class="stat-label">Students Helped</p>
+      </div>
+
+      <div class="stat-item">
+        <p class="stat-num">6</p>
+        <p class="stat-label">Templates Available</p>
+      </div>
+
+      <div class="stat-item">
+        <p class="stat-num">95%</p>
+        <p class="stat-label">ATS Pass Rate</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section grey-section">
+    <h2 class="section-title">Why Does Your Resume Matter?</h2>
+
+    <div class="info-grid">
+
+      <div class="info-card">
+        <h3>⏱️ 6 Seconds Rule</h3>
+        <p>Studies show that recruiters spend only about 6 seconds scanning a resume before deciding whether to read further. First impressions matter enormously.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>🤖 ATS Filters 75%</h3>
+        <p>About 75% of resumes are rejected by ATS software before any human reads them. A well-formatted, keyword-optimized resume is essential today.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>🏆 First Impression</h3>
+        <p>Your resume is often the first thing an employer sees. A clean, professional resume shows you are organized, serious, and pay attention to detail.</p>
+      </div>
+
+      <div class="info-card">
+        <h3>🚪 Opens Doors</h3>
+        <p>A great resume doesn't get you the job — but it gets you the interview. And an interview is your chance to show your real skills and personality.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section white-section">
+    <h2 class="section-title">What We Offer</h2>
+
+    <div class="offer-list">
+
+      <div class="offer-row">
+        <span class="offer-icon">📝</span>
+        <div class="offer-text">
+          <h3>Easy Resume Builder</h3>
+          <p>A simple form where you fill in your details — name, education, skills, projects — and we arrange it into a professional resume layout automatically. No design skills needed at all.</p>
+        </div>
+      </div>
+
+      <div class="offer-row">
+        <span class="offer-icon">🎨</span>
+        <div class="offer-text">
+          <h3>Multiple Professional Templates</h3>
+          <p>Choose from 6 clean, professional resume templates. Every template is designed for freshers and early-career professionals in the Indian job market.</p>
+        </div>
+      </div>
+
+      <div class="offer-row">
+        <span class="offer-icon">📚</span>
+        <div class="offer-text">
+          <h3>ATS Education</h3>
+          <p>We don't just help you build a resume — we also teach you how Applicant Tracking Systems work so you understand why certain choices make your resume more effective.</p>
+        </div>
+      </div>
+
+      <div class="offer-row">
+        <span class="offer-icon">💰</span>
+        <div class="offer-text">
+          <h3>Affordable Indian Pricing</h3>
+          <p>Our plans are priced specifically for Indian college students — not for foreign markets. Start completely free and upgrade only if you need more features.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section grey-section">
+    <h2 class="section-title">Meet the Team</h2>
+
+    <div class="team-grid">
+
+      <div class="team-card">
+        <svg class="team-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="60" fill="#dbeafe"/>
+  
+  <ellipse cx="60" cy="105" rx="34" ry="22" fill="#1a56db"/>
+  
+  <rect x="52" y="78" width="16" height="14" rx="4" fill="#fcd9a0"/>
+  
+  <circle cx="60" cy="68" r="22" fill="#fcd9a0"/>
+  
+  <ellipse cx="60" cy="50" rx="22" ry="10" fill="#1e3560"/>
+  <rect x="38" y="50" width="44" height="8" fill="#1e3560"/>
+  
+  <circle cx="53" cy="67" r="3.5" fill="#334155"/>
+  <circle cx="67" cy="67" r="3.5" fill="#334155"/>
+  <circle cx="54" cy="66" r="1.2" fill="white"/>
+  <circle cx="68" cy="66" r="1.2" fill="white"/>
+  
+  <path d="M53 76 Q60 82 67 76" fill="none" stroke="#c2855a" stroke-width="2" stroke-linecap="round"/>
+  
+  <rect x="50" y="92" width="20" height="14" rx="3" fill="#1339a0"/>
+  <rect x="52" y="94" width="16" height="10" rx="2" fill="#93c5fd" opacity="0.6"/>
+</svg>
+        <h3>Arjun Sharma</h3>
+        <p class="team-role">Founder &amp; Developer</p>
+        <p>B.Tech CSE graduate passionate about helping students get their first job through better resumes.</p>
+      </div>
+
+      <div class="team-card">
+        <svg class="team-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="60" fill="#fce7f3"/>
+  
+  <ellipse cx="60" cy="105" rx="34" ry="22" fill="#db2777"/>
+  
+  <rect x="52" y="78" width="16" height="14" rx="4" fill="#fcd9a0"/>
+  
+  <circle cx="60" cy="68" r="22" fill="#fcd9a0"/>
+  
+  <ellipse cx="60" cy="48" rx="22" ry="12" fill="#92400e"/>
+  <rect x="38" y="48" width="8" height="30" rx="4" fill="#92400e"/>
+  <rect x="74" y="48" width="8" height="30" rx="4" fill="#92400e"/>
+  
+  <circle cx="53" cy="67" r="3.5" fill="#334155"/>
+  <circle cx="67" cy="67" r="3.5" fill="#334155"/>
+  <circle cx="54" cy="66" r="1.2" fill="white"/>
+  <circle cx="68" cy="66" r="1.2" fill="white"/>
+  
+  <path d="M53 76 Q60 83 67 76" fill="none" stroke="#c2855a" stroke-width="2" stroke-linecap="round"/>
+  
+  <circle cx="55" cy="98" r="7" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="65" cy="98" r="7" fill="rgba(255,255,255,0.3)"/>
+  <circle cx="60" cy="93" r="5" fill="rgba(255,255,255,0.3)"/>
+</svg>
+        <h3>Priya Gupta</h3>
+        <p class="team-role">UI/UX Designer</p>
+        <p>Creates clean, professional templates that look great and pass ATS systems effortlessly.</p>
+      </div>
+
+      <div class="team-card">
+        <svg class="team-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="60" fill="#dcfce7"/>
+  
+  <ellipse cx="60" cy="105" rx="34" ry="22" fill="#1e3560"/>
+  
+  <rect x="55" y="88" width="10" height="18" rx="2" fill="white" opacity="0.8"/>
+  <polygon points="60,90 57,98 63,98" fill="#dc2626"/>
+  
+  <rect x="52" y="78" width="16" height="14" rx="4" fill="#fcd9a0"/>
+  
+  <circle cx="60" cy="68" r="22" fill="#fcd9a0"/>
+  
+  <ellipse cx="60" cy="49" rx="22" ry="9" fill="#334155"/>
+  <rect x="38" y="49" width="44" height="6" fill="#334155"/>
+  
+  <circle cx="53" cy="67" r="3.5" fill="#334155"/>
+  <circle cx="67" cy="67" r="3.5" fill="#334155"/>
+  <circle cx="54" cy="66" r="1.2" fill="white"/>
+  <circle cx="68" cy="66" r="1.2" fill="white"/>
+  
+  <rect x="46" y="62" width="14" height="11" rx="3" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <rect x="62" y="62" width="14" height="11" rx="3" fill="none" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="60" y1="66" x2="62" y2="66" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="46" y1="66" x2="42" y2="64" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="76" y1="66" x2="80" y2="64" stroke="#64748b" stroke-width="1.5"/>
+  
+  <path d="M53 76 Q60 82 67 76" fill="none" stroke="#c2855a" stroke-width="2" stroke-linecap="round"/>
+</svg>
+        <h3>Rahul Verma</h3>
+        <p class="team-role">Career Advisor</p>
+        <p>Former HR professional with 8 years of recruitment experience at top Indian IT companies.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section white-section">
+    <h2 class="section-title">📬 Get in Touch</h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <span class="contact-icon">📧</span>
+        <h4>Email Us</h4>
+        <p>hello@smartresume.in</p>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-icon">📱</span>
+        <h4>Call Us</h4>
+        <p>+91 98765 43210</p>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-icon">📍</span>
+        <h4>Location</h4>
+        <p>India (Remote-first team)</p>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-icon">🕐</span>
+        <h4>Support Hours</h4>
+        <p>Mon – Sat, 9 AM – 6 PM IST</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to Start Your Career Journey?</h2>
+    <p>Build your resume today and take the first step toward your dream job.</p>
+    <a href="build-resume.html" class="btn-primary">Build My Resume →</a>
+  </section>
+
+  <section class="section white-section" aria-labelledby="contact-heading">
+    <h2 class="section-title" id="contact-heading">📬 Get In Touch</h2>
+    <p class="section-sub">Have a question, feedback, or partnership idea? We'd love to hear from you.</p>
+
+    <div class="contact-form-section">
+      <h3>Send Us a Message</h3>
+      <p class="form-sub">We reply to every message within 24 hours.</p>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="contactName">Your Name *</label>
+            <input type="text" id="contactName" placeholder="e.g. Arjun Sharma"
+                   required data-label="Name" aria-required="true" autocomplete="name">
+            <span class="err-msg" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label for="contactEmail">Email Address *</label>
+            <input type="email" id="contactEmail" placeholder="you@gmail.com"
+                   required data-label="Email" aria-required="true" autocomplete="email">
+            <span class="err-msg" role="alert"></span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contactSubject">Subject *</label>
+          <input type="text" id="contactSubject" placeholder="e.g. Question about ATS templates"
+                 required data-label="Subject" aria-required="true">
+          <span class="err-msg" role="alert"></span>
+        </div>
+        <div class="form-group">
+          <label for="contactMsg">Your Message * <small>(at least 20 characters)</small></label>
+          <textarea id="contactMsg" rows="5"
+                    placeholder="Write your message here..."
+                    required data-label="Message" aria-required="true"></textarea>
+          <span class="err-msg" role="alert"></span>
+        </div>
+        <button type="submit" class="contact-submit" aria-label="Send your message">
+          Send Message ✉️
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="footer-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial; margin-bottom: 12px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="9" fill="url(#logo-grad-foot)" />
+            <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="logo-grad-foot" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a855f7" />
+                <stop offset="1" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; letter-spacing: -0.5px; display: flex; align-items: center;">
+            Resume<span style="color: #a855f7; margin-left: 1px;">Flow</span>
+          </span>
+        </div>
+        <p class="footer-about">Helping students and freshers build resumes that get noticed.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="learn-ats.html">Learn ATS</a>
+        <a href="templates.html">Templates</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="about.html">About Us</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="build-resume.html">Build Resume</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📧 hello@smartresume.in</p>
+        <p>📱 +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Resume Flow. Made with ❤️ for Indian Students.</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

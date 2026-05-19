@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <rect width="240" height="160" rx="12" fill="#fef9c3"/>
+  <!-- Resume sheet -->
+  <rect x="20" y="14" width="130" height="132" rx="8" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+  <rect x="20" y="14" width="130" height="10" rx="4" fill="#1a56db"/>
+  <rect x="32" y="32" width="80" height="8" rx="2" fill="#1e3560"/>
+  <rect x="32" y="46" width="60" height="5" rx="2" fill="#1a56db" opacity="0.6"/>
+  <rect x="32" y="58" width="106" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="32" y="67" width="90" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="32" y="80" width="55" height="5" rx="2" fill="#1a56db"/>
+  <rect x="32" y="90" width="106" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="32" y="99" width="80" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="32" y="112" width="55" height="5" rx="2" fill="#1a56db"/>
+  <rect x="32" y="122" width="106" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="32" y="131" width="90" height="4" rx="2" fill="#e2e8f0"/>
+  <!-- Big green download arrow circle -->
+  <circle cx="185" cy="80" r="40" fill="#16a34a" filter="url(#glw)"/>
+  <defs>
+    <filter id="glw" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#16a34a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Down arrow -->
+  <line x1="185" y1="58" x2="185" y2="86" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  <polyline points="171,76 185,92 199,76" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- PDF label -->
+  <rect x="162" y="104" width="46" height="14" rx="7" fill="rgba(255,255,255,0.25)"/>
+  <text x="185" y="115" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="white">PDF</text>
+</svg>

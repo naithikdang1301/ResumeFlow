@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" width="340" height="440">
+  <!-- Bold Dark Template -->
+  <rect width="340" height="440" fill="#ffffff" rx="4"/>
+  <!-- Large dark header -->
+  <rect width="340" height="110" fill="#1e3560"/>
+  <!-- Gold accent bar -->
+  <rect width="340" height="4" fill="#f59e0b"/>
+  <!-- Name in header -->
+  <rect x="30" y="24" width="200" height="22" rx="3" fill="#ffffff"/>
+  <!-- Job title in header -->
+  <rect x="30" y="54" width="150" height="10" rx="2" fill="rgba(255,255,255,0.55)"/>
+  <!-- Contact row dots -->
+  <circle cx="36" cy="84" r="3" fill="#f59e0b"/>
+  <rect x="46" y="80" width="70" height="7" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="128" cy="84" r="3" fill="#f59e0b"/>
+  <rect x="138" y="80" width="70" height="7" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="220" cy="84" r="3" fill="#f59e0b"/>
+  <rect x="230" y="80" width="70" height="7" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <!-- Body starts -->
+  <!-- Section: Objective -->
+  <rect x="30" y="124" width="4" height="32" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="124" width="100" height="9" rx="2" fill="#1e3560"/>
+  <rect x="44" y="140" width="266" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="151" width="240" height="6" rx="2" fill="#cbd5e1"/>
+  <!-- Divider -->
+  <rect x="30" y="170" width="280" height="1" fill="#e2e8f0"/>
+  <!-- Section: Education -->
+  <rect x="30" y="180" width="4" height="56" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="180" width="80" height="9" rx="2" fill="#1e3560"/>
+  <rect x="44" y="196" width="190" height="8" rx="2" fill="#334155"/>
+  <rect x="252" y="196" width="58" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="44" y="210" width="140" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="44" y="222" width="110" height="6" rx="2" fill="#94a3b8"/>
+  <!-- Divider -->
+  <rect x="30" y="248" width="280" height="1" fill="#e2e8f0"/>
+  <!-- Section: Skills -->
+  <rect x="30" y="258" width="4" height="62" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="258" width="55" height="9" rx="2" fill="#1e3560"/>
+  <!-- 2-column skill list -->
+  <rect x="44" y="274" width="120" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="180" y="274" width="120" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="287" width="110" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="180" y="287" width="130" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="300" width="125" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="180" y="300" width="100" height="7" rx="2" fill="#cbd5e1"/>
+  <!-- Divider -->
+  <rect x="30" y="330" width="280" height="1" fill="#e2e8f0"/>
+  <!-- Section: Projects -->
+  <rect x="30" y="340" width="4" height="90" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="340" width="65" height="9" rx="2" fill="#1e3560"/>
+  <rect x="44" y="356" width="180" height="8" rx="2" fill="#334155"/>
+  <rect x="44" y="370" width="266" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="381" width="230" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="396" width="165" height="8" rx="2" fill="#334155"/>
+  <rect x="44" y="410" width="266" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="421" width="200" height="6" rx="2" fill="#cbd5e1"/>
+</svg>

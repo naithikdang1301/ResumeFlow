@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <circle cx="60" cy="60" r="60" fill="#dbeafe"/>
+  <!-- Body -->
+  <ellipse cx="60" cy="105" rx="34" ry="22" fill="#1a56db"/>
+  <!-- Neck -->
+  <rect x="52" y="78" width="16" height="14" rx="4" fill="#fcd9a0"/>
+  <!-- Head -->
+  <circle cx="60" cy="68" r="22" fill="#fcd9a0"/>
+  <!-- Hair -->
+  <ellipse cx="60" cy="50" rx="22" ry="10" fill="#1e3560"/>
+  <rect x="38" y="50" width="44" height="8" fill="#1e3560"/>
+  <!-- Eyes -->
+  <circle cx="53" cy="67" r="3.5" fill="#334155"/>
+  <circle cx="67" cy="67" r="3.5" fill="#334155"/>
+  <circle cx="54" cy="66" r="1.2" fill="white"/>
+  <circle cx="68" cy="66" r="1.2" fill="white"/>
+  <!-- Smile -->
+  <path d="M53 76 Q60 82 67 76" fill="none" stroke="#c2855a" stroke-width="2" stroke-linecap="round"/>
+  <!-- Collar / laptop icon suggestion -->
+  <rect x="50" y="92" width="20" height="14" rx="3" fill="#1339a0"/>
+  <rect x="52" y="94" width="16" height="10" rx="2" fill="#93c5fd" opacity="0.6"/>
+</svg>

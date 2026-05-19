@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" width="420" height="300">
+  <defs>
+    <filter id="s1"><feDropShadow dx="0" dy="4" stdDeviation="10" flood-opacity="0.1"/></filter>
+    <filter id="s2"><feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#1a56db" flood-opacity="0.2"/></filter>
+  </defs>
+  <rect width="420" height="300" rx="16" fill="#f0f4fa"/>
+
+  <!-- Resume document (left) -->
+  <rect x="18" y="24" width="140" height="250" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#s1)"/>
+  <rect x="18" y="24" width="140" height="8" rx="4" fill="#1a56db"/>
+  <rect x="30" y="42" width="80" height="10" rx="3" fill="#1e3560"/>
+  <rect x="30" y="58" width="60" height="6" rx="2" fill="#1a56db" opacity="0.7"/>
+  <rect x="30" y="72" width="116" height="1" fill="#e2e8f0"/>
+  <rect x="30" y="80" width="50" height="6" rx="2" fill="#1a56db"/>
+  <rect x="30" y="91" width="116" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="101" width="100" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="114" width="116" height="1" fill="#e2e8f0"/>
+  <rect x="30" y="122" width="50" height="6" rx="2" fill="#1a56db"/>
+  <rect x="30" y="134" width="116" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="144" width="90" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="154" width="110" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="167" width="116" height="1" fill="#e2e8f0"/>
+  <rect x="30" y="175" width="50" height="6" rx="2" fill="#1a56db"/>
+  <rect x="30" y="187" width="46" height="16" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="82" y="187" width="42" height="16" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="30" y="208" width="40" height="16" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="76" y="208" width="48" height="16" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="30" y="232" width="116" height="1" fill="#e2e8f0"/>
+  <rect x="30" y="241" width="50" height="6" rx="2" fill="#1a56db"/>
+  <rect x="30" y="252" width="116" height="5" rx="2" fill="#cbd5e1"/>
+
+  <!-- Arrow: resume → ATS -->
+  <line x1="168" y1="150" x2="200" y2="150" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="5,4"/>
+  <polygon points="196,144 208,150 196,156" fill="#94a3b8"/>
+
+  <!-- ATS Robot circle (centre) -->
+  <circle cx="250" cy="150" r="55" fill="#1a56db" filter="url(#s2)"/>
+  <circle cx="250" cy="150" r="44" fill="#1339a0"/>
+  <!-- Robot face -->
+  <rect x="226" y="130" width="48" height="36" rx="6" fill="#1a56db"/>
+  <!-- Eyes -->
+  <circle cx="238" cy="145" r="6" fill="white"/>
+  <circle cx="262" cy="145" r="6" fill="white"/>
+  <circle cx="240" cy="146" r="3" fill="#1339a0"/>
+  <circle cx="264" cy="146" r="3" fill="#1339a0"/>
+  <!-- Mouth -->
+  <rect x="234" y="156" width="32" height="4" rx="2" fill="#93c5fd"/>
+  <!-- Antenna -->
+  <line x1="250" y1="124" x2="250" y2="108" stroke="white" stroke-width="2.5"/>
+  <circle cx="250" cy="105" r="5" fill="#f59e0b"/>
+  <!-- Scanning lines from robot -->
+  <line x1="210" y1="138" x2="195" y2="132" stroke="#93c5fd" stroke-width="1.5" opacity="0.6"/>
+  <line x1="210" y1="150" x2="195" y2="150" stroke="#93c5fd" stroke-width="1.5" opacity="0.6"/>
+  <line x1="210" y1="162" x2="195" y2="168" stroke="#93c5fd" stroke-width="1.5" opacity="0.6"/>
+  <!-- ATS label -->
+  <text x="250" y="200" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="white">ATS SYSTEM</text>
+
+  <!-- Arrow: ATS → result -->
+  <line x1="305" y1="150" x2="334" y2="150" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="5,4"/>
+  <polygon points="330,144 342,150 330,156" fill="#94a3b8"/>
+
+  <!-- Result panel (right) -->
+  <rect x="342" y="80" width="62" height="140" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#s1)"/>
+  <!-- Score ring -->
+  <circle cx="373" cy="122" r="26" fill="none" stroke="#e2e8f0" stroke-width="5"/>
+  <circle cx="373" cy="122" r="26" fill="none" stroke="#16a34a" stroke-width="5" stroke-dasharray="138 163" stroke-dashoffset="41" stroke-linecap="round"/>
+  <text x="373" y="119" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#16a34a">92%</text>
+  <text x="373" y="131" font-family="sans-serif" font-size="7" text-anchor="middle" fill="#94a3b8">SCORE</text>
+  <!-- Passed badge -->
+  <rect x="352" y="156" width="42" height="18" rx="9" fill="#dcfce7"/>
+  <text x="373" y="169" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#16a34a">PASSED</text>
+  <!-- Lines below -->
+  <rect x="354" y="182" width="38" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="354" y="191" width="30" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="354" y="200" width="34" height="4" rx="2" fill="#e2e8f0"/>
+
+  <!-- Bottom caption -->
+  <rect x="100" y="280" width="220" height="12" rx="4" fill="#dbeafe"/>
+  <text x="210" y="289" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#1a56db">75% of resumes are rejected by ATS before a human sees them</text>
+</svg>

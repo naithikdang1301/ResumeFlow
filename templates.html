@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Templates - Resume Flow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-cb">
+    <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial;">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="9" fill="url(#logo-grad-nav)" />
+        <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <defs>
+          <linearGradient id="logo-grad-nav" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a855f7" />
+            <stop offset="1" stop-color="#6366f1" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #1e1b4b; letter-spacing: -0.5px; display: flex; align-items: center;">
+        Resume<span style="color: #6d28d9; margin-left: 1px;">Flow</span>
+      </span>
+    </a>
+    <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learn-ats.html">Learn ATS</a></li>
+      <li><a href="templates.html" class="active">Templates</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="login.html" id="navLoginLink">Login</a></li>
+      <li><a href="#" id="navLogoutLink" style="display:none" onclick="logoutUser();return false;">Logout</a></li>
+      <li><a href="build-resume.html" class="nav-cta">Build Resume</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <h1>🎨 Resume Templates</h1>
+    <p>Choose a professional template that suits your style and field</p>
+  </section>
+
+  <section class="section" id="main-content" role="main" white-section" style="padding-bottom: 10px;">
+    <p style="text-align:center; color:#555; font-size:16px; max-width:600px; margin:0 auto;">
+      All our templates are ATS-friendly, clean, and professionally designed.
+      Click "Use This Template" to start building your resume instantly.
+    </p>
+  </section>
+
+  <section class="section white-section">
+    <div class="templates-grid">
+
+      <div class="template-card">
+
+        <div class="template-img-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" width="340" height="440">
+  
+  <rect width="340" height="440" fill="#ffffff" rx="4"/>
+  
+  <rect width="340" height="6" fill="#1a56db" rx="0"/>
+  
+  <rect x="30" y="30" width="180" height="18" rx="3" fill="#1e3560"/>
+  
+  <rect x="30" y="56" width="120" height="10" rx="2" fill="#1a56db"/>
+  
+  <rect x="30" y="76" width="80" height="7" rx="2" fill="#94a3b8"/>
+  <rect x="120" y="76" width="80" height="7" rx="2" fill="#94a3b8"/>
+  <rect x="210" y="76" width="80" height="7" rx="2" fill="#94a3b8"/>
+  
+  <rect x="30" y="95" width="280" height="2" fill="#e2e8f0"/>
+  
+  <rect x="30" y="108" width="90" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="124" width="280" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="136" width="240" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="148" width="260" height="7" rx="2" fill="#cbd5e1"/>
+  
+  <rect x="30" y="165" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="175" width="80" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="191" width="200" height="8" rx="2" fill="#334155"/>
+  <rect x="30" y="204" width="140" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="215" width="100" height="6" rx="2" fill="#94a3b8"/>
+  
+  <rect x="30" y="232" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="242" width="55" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="258" width="60" height="22" rx="11" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="98" y="258" width="55" height="22" rx="11" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="161" y="258" width="70" height="22" rx="11" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="239" y="258" width="50" height="22" rx="11" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="30" y="286" width="65" height="22" rx="11" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="103" y="286" width="58" height="22" rx="11" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  
+  <rect x="30" y="318" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="328" width="65" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="344" width="200" height="8" rx="2" fill="#334155"/>
+  <rect x="30" y="358" width="280" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="369" width="240" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="380" width="260" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="396" width="180" height="8" rx="2" fill="#334155"/>
+  <rect x="30" y="410" width="280" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="421" width="200" height="6" rx="2" fill="#cbd5e1"/>
+</svg>
+          <div class="template-overlay">
+            <a href="build-resume.html" class="btn-primary small-btn">Use This Template</a>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="badge badge-green">Fresher</span>
+          <h3>Classic Clean</h3>
+          <p>Simple and clean design. Perfect for first-time job seekers and freshers applying anywhere.</p>
+          <a href="build-resume.html" class="btn-outline small-btn full-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <div class="template-card">
+        <div class="template-img-wrap">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" width="340" height="440">
+  
+  <rect width="340" height="440" fill="#ffffff" rx="4"/>
+  
+  <rect width="340" height="90" fill="#1a56db" rx="0"/>
+  
+  <rect x="30" y="24" width="180" height="18" rx="3" fill="#ffffff"/>
+  
+  <rect x="30" y="50" width="130" height="9" rx="2" fill="rgba(255,255,255,0.65)"/>
+  
+  <rect x="30" y="68" width="70" height="7" rx="2" fill="rgba(255,255,255,0.45)"/>
+  <rect x="110" y="68" width="70" height="7" rx="2" fill="rgba(255,255,255,0.45)"/>
+  <rect x="190" y="68" width="70" height="7" rx="2" fill="rgba(255,255,255,0.45)"/>
+  
+  <rect x="30" y="108" width="90" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="106" width="3" height="13" rx="1" fill="#1a56db"/>
+  <rect x="30" y="124" width="280" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="136" width="240" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="148" width="260" height="7" rx="2" fill="#cbd5e1"/>
+  
+  <rect x="30" y="165" width="280" height="2" fill="#bfdbfe"/>
+  
+  <rect x="30" y="176" width="80" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="175" width="3" height="13" rx="1" fill="#1a56db"/>
+  <rect x="30" y="192" width="200" height="8" rx="2" fill="#334155"/>
+  <rect x="240" y="192" width="70" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="206" width="150" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="218" width="110" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="232" width="280" height="2" fill="#bfdbfe"/>
+  
+  <rect x="30" y="243" width="55" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="242" width="3" height="13" rx="1" fill="#1a56db"/>
+  
+  <rect x="30" y="259" width="280" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="30" y="259" width="210" height="6" rx="3" fill="#1a56db"/>
+  <rect x="30" y="272" width="280" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="30" y="272" width="180" height="6" rx="3" fill="#1a56db"/>
+  <rect x="30" y="285" width="280" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="30" y="285" width="240" height="6" rx="3" fill="#1a56db"/>
+  <rect x="30" y="298" width="280" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="30" y="298" width="160" height="6" rx="3" fill="#1a56db"/>
+  <rect x="30" y="315" width="280" height="2" fill="#bfdbfe"/>
+  
+  <rect x="30" y="326" width="65" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="325" width="3" height="13" rx="1" fill="#1a56db"/>
+  <rect x="30" y="343" width="200" height="8" rx="2" fill="#334155"/>
+  <rect x="30" y="357" width="280" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="368" width="240" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="384" width="180" height="8" rx="2" fill="#334155"/>
+  <rect x="30" y="398" width="280" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="409" width="200" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="420" width="250" height="6" rx="2" fill="#cbd5e1"/>
+</svg>
+          <div class="template-overlay">
+            <a href="build-resume.html" class="btn-primary small-btn">Use This Template</a>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="badge badge-blue">Professional</span>
+          <h3>Modern Blue</h3>
+          <p>Professional blue accents. Great for corporate job applications at MNCs and large companies.</p>
+          <a href="build-resume.html" class="btn-outline small-btn full-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <div class="template-card">
+        <div class="template-img-wrap">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" width="340" height="440">
+  
+  <rect width="340" height="440" fill="#ffffff" rx="4"/>
+  
+  <rect width="340" height="3" fill="#111111"/>
+  
+  <rect x="70" y="28" width="200" height="22" rx="3" fill="#111111"/>
+  
+  <rect x="100" y="58" width="140" height="10" rx="2" fill="#64748b"/>
+  
+  <rect x="50" y="78" width="60" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="140" y="78" width="60" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="230" y="78" width="60" height="6" rx="2" fill="#94a3b8"/>
+  
+  <rect x="30" y="97" width="280" height="1" fill="#111111"/>
+  
+  <rect x="30" y="110" width="100" height="7" rx="2" fill="#111111"/>
+  <rect x="30" y="124" width="280" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="135" width="250" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="146" width="265" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="162" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="173" width="80" height="7" rx="2" fill="#111111"/>
+  <rect x="30" y="187" width="200" height="8" rx="2" fill="#334155"/>
+  <rect x="242" y="187" width="68" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="201" width="140" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="213" width="110" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="228" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="239" width="55" height="7" rx="2" fill="#111111"/>
+  <rect x="30" y="253" width="62" height="20" rx="3" fill="#f1f5f9"/>
+  <rect x="100" y="253" width="56" height="20" rx="3" fill="#f1f5f9"/>
+  <rect x="164" y="253" width="72" height="20" rx="3" fill="#f1f5f9"/>
+  <rect x="244" y="253" width="46" height="20" rx="3" fill="#f1f5f9"/>
+  <rect x="30" y="279" width="66" height="20" rx="3" fill="#f1f5f9"/>
+  <rect x="104" y="279" width="58" height="20" rx="3" fill="#f1f5f9"/>
+  <rect x="170" y="279" width="52" height="20" rx="3" fill="#f1f5f9"/>
+  <rect x="30" y="310" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="320" width="65" height="7" rx="2" fill="#111111"/>
+  <rect x="30" y="335" width="190" height="8" rx="2" fill="#334155"/>
+  <rect x="30" y="349" width="280" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="360" width="245" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="375" width="170" height="8" rx="2" fill="#334155"/>
+  <rect x="30" y="389" width="280" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="400" width="210" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="415" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="425" width="80" height="7" rx="2" fill="#111111"/>
+</svg>
+          <div class="template-overlay">
+            <a href="build-resume.html" class="btn-primary small-btn">Use This Template</a>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="badge badge-green">Fresher</span>
+          <h3>Minimal White</h3>
+          <p>Ultra-clean and minimal design. Ideal for tech companies, startups, and software roles.</p>
+          <a href="build-resume.html" class="btn-outline small-btn full-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <div class="template-card">
+        <div class="template-img-wrap">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" width="340" height="440">
+  
+  <rect width="340" height="440" fill="#ffffff" rx="4"/>
+  
+  <rect width="115" height="440" fill="#15803d" rx="0"/>
+  
+  <circle cx="57" cy="60" r="34" fill="rgba(255,255,255,0.15)"/>
+  <circle cx="57" cy="60" r="26" fill="rgba(255,255,255,0.25)"/>
+  
+  <rect x="20" y="104" width="75" height="10" rx="2" fill="rgba(255,255,255,0.85)"/>
+  <rect x="28" y="119" width="58" height="7" rx="2" fill="rgba(255,255,255,0.55)"/>
+  
+  <rect x="14" y="136" width="86" height="1" fill="rgba(255,255,255,0.2)"/>
+  
+  <rect x="14" y="145" width="50" height="7" rx="2" fill="rgba(255,255,255,0.65)"/>
+  <rect x="14" y="158" width="86" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <rect x="14" y="170" width="80" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <rect x="14" y="182" width="72" height="6" rx="2" fill="rgba(255,255,255,0.4)"/>
+  
+  <rect x="14" y="198" width="86" height="1" fill="rgba(255,255,255,0.2)"/>
+  
+  <rect x="14" y="207" width="50" height="7" rx="2" fill="rgba(255,255,255,0.65)"/>
+  <rect x="14" y="221" width="86" height="5" rx="2.5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="14" y="221" width="72" height="5" rx="2.5" fill="rgba(255,255,255,0.7)"/>
+  <rect x="14" y="232" width="86" height="5" rx="2.5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="14" y="232" width="55" height="5" rx="2.5" fill="rgba(255,255,255,0.7)"/>
+  <rect x="14" y="243" width="86" height="5" rx="2.5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="14" y="243" width="80" height="5" rx="2.5" fill="rgba(255,255,255,0.7)"/>
+  <rect x="14" y="254" width="86" height="5" rx="2.5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="14" y="254" width="62" height="5" rx="2.5" fill="rgba(255,255,255,0.7)"/>
+  <rect x="14" y="265" width="86" height="5" rx="2.5" fill="rgba(255,255,255,0.2)"/>
+  <rect x="14" y="265" width="48" height="5" rx="2.5" fill="rgba(255,255,255,0.7)"/>
+  
+  <rect x="14" y="280" width="86" height="1" fill="rgba(255,255,255,0.2)"/>
+  
+  <rect x="14" y="289" width="60" height="7" rx="2" fill="rgba(255,255,255,0.65)"/>
+  <rect x="14" y="302" width="86" height="6" rx="2" fill="rgba(255,255,255,0.5)"/>
+  <rect x="14" y="313" width="70" height="6" rx="2" fill="rgba(255,255,255,0.35)"/>
+  <rect x="14" y="324" width="60" height="6" rx="2" fill="rgba(255,255,255,0.35)"/>
+  <rect x="14" y="340" width="86" height="6" rx="2" fill="rgba(255,255,255,0.5)"/>
+  <rect x="14" y="351" width="70" height="6" rx="2" fill="rgba(255,255,255,0.35)"/>
+
+  <rect x="130" y="28" width="170" height="18" rx="3" fill="#15803d"/>
+  <rect x="130" y="52" width="110" height="9" rx="2" fill="#64748b"/>
+  
+  <rect x="130" y="70" width="180" height="3" fill="#15803d"/>
+  
+  <rect x="130" y="82" width="80" height="8" rx="2" fill="#15803d"/>
+  <rect x="130" y="96" width="190" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="130" y="107" width="170" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="130" y="118" width="180" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="130" y="133" width="190" height="2" fill="#dcfce7"/>
+  
+  <rect x="130" y="143" width="80" height="8" rx="2" fill="#15803d"/>
+  <rect x="130" y="157" width="160" height="7" rx="2" fill="#334155"/>
+  <rect x="130" y="170" width="100" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="130" y="182" width="190" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="130" y="193" width="160" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="130" y="207" width="190" height="2" fill="#dcfce7"/>
+  
+  <rect x="130" y="217" width="65" height="8" rx="2" fill="#15803d"/>
+  <rect x="130" y="231" width="155" height="7" rx="2" fill="#334155"/>
+  <rect x="130" y="244" width="190" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="130" y="255" width="175" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="130" y="269" width="190" height="2" fill="#dcfce7"/>
+  <rect x="130" y="279" width="140" height="7" rx="2" fill="#334155"/>
+  <rect x="130" y="292" width="190" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="130" y="303" width="165" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="130" y="317" width="190" height="2" fill="#dcfce7"/>
+  
+  <rect x="130" y="327" width="90" height="8" rx="2" fill="#15803d"/>
+  <rect x="130" y="341" width="190" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="130" y="352" width="150" height="6" rx="2" fill="#cbd5e1"/>
+</svg>
+          <div class="template-overlay">
+            <a href="build-resume.html" class="btn-primary small-btn">Use This Template</a>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="badge badge-yellow">Creative</span>
+          <h3>Green Sidebar</h3>
+          <p>Two-column layout with a green sidebar. Great for design, media, or marketing roles.</p>
+          <a href="build-resume.html" class="btn-outline small-btn full-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <div class="template-card">
+        <div class="template-img-wrap">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" width="340" height="440">
+  
+  <rect width="340" height="440" fill="#ffffff" rx="4"/>
+  
+  <rect width="340" height="110" fill="#1e3560"/>
+  
+  <rect width="340" height="4" fill="#f59e0b"/>
+  
+  <rect x="30" y="24" width="200" height="22" rx="3" fill="#ffffff"/>
+  
+  <rect x="30" y="54" width="150" height="10" rx="2" fill="rgba(255,255,255,0.55)"/>
+  
+  <circle cx="36" cy="84" r="3" fill="#f59e0b"/>
+  <rect x="46" y="80" width="70" height="7" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="128" cy="84" r="3" fill="#f59e0b"/>
+  <rect x="138" y="80" width="70" height="7" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="220" cy="84" r="3" fill="#f59e0b"/>
+  <rect x="230" y="80" width="70" height="7" rx="2" fill="rgba(255,255,255,0.4)"/>
+
+  <rect x="30" y="124" width="4" height="32" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="124" width="100" height="9" rx="2" fill="#1e3560"/>
+  <rect x="44" y="140" width="266" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="151" width="240" height="6" rx="2" fill="#cbd5e1"/>
+  
+  <rect x="30" y="170" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="180" width="4" height="56" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="180" width="80" height="9" rx="2" fill="#1e3560"/>
+  <rect x="44" y="196" width="190" height="8" rx="2" fill="#334155"/>
+  <rect x="252" y="196" width="58" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="44" y="210" width="140" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="44" y="222" width="110" height="6" rx="2" fill="#94a3b8"/>
+  
+  <rect x="30" y="248" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="258" width="4" height="62" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="258" width="55" height="9" rx="2" fill="#1e3560"/>
+  
+  <rect x="44" y="274" width="120" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="180" y="274" width="120" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="287" width="110" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="180" y="287" width="130" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="300" width="125" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="180" y="300" width="100" height="7" rx="2" fill="#cbd5e1"/>
+  
+  <rect x="30" y="330" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="340" width="4" height="90" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="340" width="65" height="9" rx="2" fill="#1e3560"/>
+  <rect x="44" y="356" width="180" height="8" rx="2" fill="#334155"/>
+  <rect x="44" y="370" width="266" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="381" width="230" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="396" width="165" height="8" rx="2" fill="#334155"/>
+  <rect x="44" y="410" width="266" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="421" width="200" height="6" rx="2" fill="#cbd5e1"/>
+</svg>
+          <div class="template-overlay">
+            <a href="build-resume.html" class="btn-primary small-btn">Use This Template</a>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="badge badge-blue">Professional</span>
+          <h3>Bold Dark</h3>
+          <p>Confident dark header design. Stands out from the crowd. Great for experienced candidates.</p>
+          <a href="build-resume.html" class="btn-outline small-btn full-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <div class="template-card">
+        <div class="template-img-wrap">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" width="340" height="440">
+  
+  <rect width="340" height="440" fill="#ffffff" rx="4"/>
+  
+  <rect width="340" height="110" fill="#1e3560"/>
+  
+  <rect width="340" height="4" fill="#f59e0b"/>
+  
+  <rect x="30" y="24" width="200" height="22" rx="3" fill="#ffffff"/>
+  
+  <rect x="30" y="54" width="150" height="10" rx="2" fill="rgba(255,255,255,0.55)"/>
+  
+  <circle cx="36" cy="84" r="3" fill="#f59e0b"/>
+  <rect x="46" y="80" width="70" height="7" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="128" cy="84" r="3" fill="#f59e0b"/>
+  <rect x="138" y="80" width="70" height="7" rx="2" fill="rgba(255,255,255,0.4)"/>
+  <circle cx="220" cy="84" r="3" fill="#f59e0b"/>
+  <rect x="230" y="80" width="70" height="7" rx="2" fill="rgba(255,255,255,0.4)"/>
+
+  <rect x="30" y="124" width="4" height="32" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="124" width="100" height="9" rx="2" fill="#1e3560"/>
+  <rect x="44" y="140" width="266" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="151" width="240" height="6" rx="2" fill="#cbd5e1"/>
+  
+  <rect x="30" y="170" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="180" width="4" height="56" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="180" width="80" height="9" rx="2" fill="#1e3560"/>
+  <rect x="44" y="196" width="190" height="8" rx="2" fill="#334155"/>
+  <rect x="252" y="196" width="58" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="44" y="210" width="140" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="44" y="222" width="110" height="6" rx="2" fill="#94a3b8"/>
+  
+  <rect x="30" y="248" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="258" width="4" height="62" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="258" width="55" height="9" rx="2" fill="#1e3560"/>
+  
+  <rect x="44" y="274" width="120" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="180" y="274" width="120" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="287" width="110" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="180" y="287" width="130" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="300" width="125" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="180" y="300" width="100" height="7" rx="2" fill="#cbd5e1"/>
+  
+  <rect x="30" y="330" width="280" height="1" fill="#e2e8f0"/>
+  
+  <rect x="30" y="340" width="4" height="90" rx="2" fill="#f59e0b"/>
+  <rect x="44" y="340" width="65" height="9" rx="2" fill="#1e3560"/>
+  <rect x="44" y="356" width="180" height="8" rx="2" fill="#334155"/>
+  <rect x="44" y="370" width="266" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="381" width="230" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="396" width="165" height="8" rx="2" fill="#334155"/>
+  <rect x="44" y="410" width="266" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="44" y="421" width="200" height="6" rx="2" fill="#cbd5e1"/>
+</svg>
+          <div class="template-overlay">
+            <a href="build-resume.html" class="btn-primary small-btn">Use This Template</a>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="badge badge-blue">Professional</span>
+          <h3>Bold Dark</h3>
+          <p>Confident dark header design. Stands out from the crowd. Great for experienced candidates.</p>
+          <a href="build-resume.html" class="btn-outline small-btn full-btn">Use This Template</a>
+        </div>
+      </div>
+
+      <div class="template-card">
+        <div class="template-img-wrap">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" width="340" height="440">
+  
+  <rect width="340" height="440" fill="#ffffff" rx="4"/>
+  
+  <rect width="340" height="8" fill="#ea580c"/>
+  
+  <rect x="30" y="26" width="190" height="20" rx="3" fill="#1e3560"/>
+  
+  <rect x="30" y="50" width="80" height="3" rx="1.5" fill="#ea580c"/>
+  
+  <rect x="30" y="62" width="140" height="9" rx="2" fill="#64748b"/>
+  
+  <circle cx="36" cy="84" r="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <rect x="48" y="80" width="70" height="7" rx="2" fill="#94a3b8"/>
+  <circle cx="130" cy="84" r="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <rect x="142" y="80" width="70" height="7" rx="2" fill="#94a3b8"/>
+  <circle cx="224" cy="84" r="5" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5"/>
+  <rect x="236" y="80" width="70" height="7" rx="2" fill="#94a3b8"/>
+  
+  <rect x="30" y="100" width="280" height="2" fill="#ea580c"/>
+  
+  <rect x="30" y="112" width="100" height="9" rx="2" fill="#ea580c"/>
+  <rect x="30" y="128" width="280" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="139" width="250" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="150" width="265" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="165" width="280" height="1.5" fill="#fed7aa"/>
+  
+  <rect x="30" y="175" width="80" height="9" rx="2" fill="#ea580c"/>
+  
+  <rect x="30" y="191" width="280" height="46" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <rect x="44" y="200" width="180" height="8" rx="2" fill="#334155"/>
+  <rect x="236" y="200" width="62" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="44" y="214" width="130" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="44" y="225" width="100" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="248" width="280" height="1.5" fill="#fed7aa"/>
+  
+  <rect x="30" y="258" width="55" height="9" rx="2" fill="#ea580c"/>
+  
+  <rect x="30" y="274" width="62" height="22" rx="11" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <rect x="100" y="274" width="56" height="22" rx="11" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <rect x="164" y="274" width="70" height="22" rx="11" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <rect x="242" y="274" width="48" height="22" rx="11" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <rect x="30" y="302" width="66" height="22" rx="11" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <rect x="104" y="302" width="58" height="22" rx="11" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <rect x="30" y="336" width="280" height="1.5" fill="#fed7aa"/>
+  
+  <rect x="30" y="346" width="65" height="9" rx="2" fill="#ea580c"/>
+  
+  <rect x="30" y="362" width="280" height="36" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <rect x="44" y="370" width="170" height="8" rx="2" fill="#334155"/>
+  <rect x="44" y="384" width="252" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="406" width="280" height="36" rx="6" fill="#fff7ed" stroke="#fed7aa" stroke-width="1.5"/>
+  <rect x="44" y="414" width="150" height="8" rx="2" fill="#334155"/>
+  <rect x="44" y="428" width="252" height="6" rx="2" fill="#94a3b8"/>
+</svg>
+          <div class="template-overlay">
+            <a href="build-resume.html" class="btn-primary small-btn">Use This Template</a>
+          </div>
+        </div>
+        <div class="template-info">
+          <span class="badge badge-green">Fresher</span>
+          <h3>Simple Student</h3>
+          <p>Specially designed for college students applying for internships and first jobs.</p>
+          <a href="build-resume.html" class="btn-outline small-btn full-btn">Use This Template</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section grey-section">
+    <h2 class="section-title">Why Our Templates Work</h2>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>🤖 ATS Compatible</h3>
+        <p>Every template is tested to pass ATS software used by top Indian and global companies.</p>
+      </div>
+      <div class="info-card">
+        <h3>📱 Clean Layout</h3>
+        <p>Simple, single-column layouts that are easy to read for both ATS software and human recruiters.</p>
+      </div>
+      <div class="info-card">
+        <h3>🖨️ Print Ready</h3>
+        <p>All templates look crisp and professional when printed on paper or saved as PDF.</p>
+      </div>
+      <div class="info-card">
+        <h3>✏️ Easy to Edit</h3>
+        <p>Fill in your details and the template auto-formats everything neatly for you.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Not sure which template to pick?</h2>
+    <p>Start with Classic Clean — it works for almost every kind of job application.</p>
+    <a href="build-resume.html" class="btn-primary">Start with Classic Clean →</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="footer-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial; margin-bottom: 12px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="9" fill="url(#logo-grad-foot)" />
+            <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="logo-grad-foot" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a855f7" />
+                <stop offset="1" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; letter-spacing: -0.5px; display: flex; align-items: center;">
+            Resume<span style="color: #a855f7; margin-left: 1px;">Flow</span>
+          </span>
+        </div>
+        <p class="footer-about">Helping students and freshers build resumes that get noticed.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="learn-ats.html">Learn ATS</a>
+        <a href="templates.html">Templates</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="about.html">About Us</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="build-resume.html">Build Resume</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📧 hello@smartresume.in</p>
+        <p>📱 +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Resume Flow. Made with ❤️ for Indian Students.</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

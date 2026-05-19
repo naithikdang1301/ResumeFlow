@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Flow - Home</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-cb">
+    <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial;">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="9" fill="url(#logo-grad-nav)" />
+        <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <defs>
+          <linearGradient id="logo-grad-nav" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a855f7" />
+            <stop offset="1" stop-color="#6366f1" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #1e1b4b; letter-spacing: -0.5px; display: flex; align-items: center;">
+        Resume<span style="color: #6d28d9; margin-left: 1px;">Flow</span>
+      </span>
+    </a>
+    <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="learn-ats.html">Learn ATS</a></li>
+      <li><a href="templates.html">Templates</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="login.html" id="navLoginLink">Login</a></li>
+      <li><a href="#" id="navLogoutLink" style="display:none" onclick="logoutUser();return false;">Logout</a></li>
+      <li><a href="build-resume.html" class="nav-cta">Build Resume</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero">
+
+    <div class="hero-text">
+      <span class="hero-badge">Free for Students &amp; Freshers ✨</span>
+      <h1>Build Your <span class="accent">Dream Resume</span> in Minutes</h1>
+      <p class="hero-desc">
+        Resume Flow helps you create professional, ATS-friendly resumes
+        that get noticed by top companies — no design skills needed at all.
+      </p>
+      
+      <div class="hero-btns">
+        <a href="build-resume.html" class="btn-primary">🚀 Start Building Free</a>
+        <a href="templates.html" class="btn-outline">Browse Templates →</a>
+      </div>
+      <p class="hero-trust">✅ 50,000+ resumes created &nbsp;&nbsp;|&nbsp;&nbsp; ✅ No credit card needed</p>
+    </div>
+
+    <div class="hero-img">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 380" width="500" height="380">
+  
+  <rect width="500" height="380" rx="18" fill="#f8faff"/>
+  
+  <rect x="50" y="20" width="250" height="340" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  
+  <rect x="50" y="20" width="250" height="10" rx="5" fill="#1a56db"/>
+  <rect x="50" y="25" width="250" height="5" fill="#1a56db"/>
+  
+  <rect x="70" y="48" width="140" height="14" rx="3" fill="#1e3560"/>
+  
+  <rect x="70" y="68" width="100" height="8" rx="2" fill="#1a56db" opacity="0.7"/>
+  
+  <rect x="70" y="84" width="60" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="138" y="84" width="60" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="206" y="84" width="54" height="6" rx="2" fill="#94a3b8"/>
+  
+  <rect x="70" y="99" width="210" height="1.5" fill="#1a56db" opacity="0.3"/>
+  
+  <rect x="70" y="108" width="70" height="7" rx="2" fill="#1a56db"/>
+  <rect x="70" y="121" width="210" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="70" y="131" width="190" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="70" y="141" width="200" height="5" rx="2" fill="#cbd5e1"/>
+  
+  <rect x="70" y="154" width="210" height="1.5" fill="#e2e8f0"/>
+  
+  <rect x="70" y="163" width="60" height="7" rx="2" fill="#1a56db"/>
+  <rect x="70" y="176" width="150" height="6" rx="2" fill="#334155"/>
+  <rect x="70" y="188" width="110" height="5" rx="2" fill="#94a3b8"/>
+  <rect x="70" y="198" width="90" height="5" rx="2" fill="#94a3b8"/>
+  
+  <rect x="70" y="212" width="210" height="1.5" fill="#e2e8f0"/>
+  
+  <rect x="70" y="221" width="42" height="7" rx="2" fill="#1a56db"/>
+  <rect x="70" y="234" width="50" height="18" rx="9" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="128" y="234" width="44" height="18" rx="9" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="180" y="234" width="56" height="18" rx="9" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="70" y="258" width="48" height="18" rx="9" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="126" y="258" width="52" height="18" rx="9" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  
+  <rect x="70" y="284" width="210" height="1.5" fill="#e2e8f0"/>
+  
+  <rect x="70" y="293" width="52" height="7" rx="2" fill="#1a56db"/>
+  <rect x="70" y="306" width="150" height="6" rx="2" fill="#334155"/>
+  <rect x="70" y="317" width="210" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="70" y="327" width="180" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="70" y="337" width="195" height="5" rx="2" fill="#cbd5e1"/>
+
+  <rect x="320" y="40" width="150" height="80" rx="14" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#sh)"/>
+  <defs>
+    <filter id="sh" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#1a56db" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  
+  <circle cx="356" cy="80" r="24" fill="none" stroke="#e2e8f0" stroke-width="5"/>
+  <circle cx="356" cy="80" r="24" fill="none" stroke="#16a34a" stroke-width="5" stroke-dasharray="126 151" stroke-dashoffset="38" stroke-linecap="round"/>
+  <text x="356" y="77" font-family="'Playfair Display',serif" font-size="13" font-weight="700" text-anchor="middle" fill="#16a34a">95%</text>
+  <text x="356" y="89" font-family="sans-serif" font-size="7" text-anchor="middle" fill="#94a3b8">ATS</text>
+  
+  <text x="400" y="72" font-family="sans-serif" font-size="11" font-weight="700" fill="#1e3560">ATS Score</text>
+  <text x="400" y="85" font-family="sans-serif" font-size="9" fill="#94a3b8">Excellent match</text>
+  <text x="400" y="97" font-family="sans-serif" font-size="9" fill="#16a34a">✓ Ready to apply</text>
+
+  <rect x="320" y="140" width="150" height="70" rx="14" fill="#1a56db" filter="url(#sh2)"/>
+  <defs>
+    <filter id="sh2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#1a56db" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+  <text x="340" y="162" font-family="sans-serif" font-size="9" fill="rgba(255,255,255,0.7)">USED BY STUDENTS AT</text>
+  <rect x="332" y="170" width="55" height="7" rx="2" fill="rgba(255,255,255,0.6)"/>
+  <rect x="332" y="182" width="48" height="7" rx="2" fill="rgba(255,255,255,0.6)"/>
+  <rect x="332" y="194" width="60" height="7" rx="2" fill="rgba(255,255,255,0.6)"/>
+  <rect x="398" y="170" width="55" height="7" rx="2" fill="rgba(255,255,255,0.6)"/>
+  <rect x="398" y="182" width="48" height="7" rx="2" fill="rgba(255,255,255,0.6)"/>
+  <rect x="398" y="194" width="52" height="7" rx="2" fill="rgba(255,255,255,0.6)"/>
+
+  <rect x="320" y="230" width="150" height="50" rx="14" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1.5"/>
+  <text x="344" y="252" font-family="sans-serif" font-size="18">⬇️</text>
+  <text x="374" y="250" font-family="sans-serif" font-size="11" font-weight="700" fill="#15803d">Download</text>
+  <text x="374" y="263" font-family="sans-serif" font-size="9" fill="#94a3b8">PDF · Word · HTML</text>
+
+  <rect x="320" y="300" width="150" height="50" rx="14" fill="#fef9c3" stroke="#fde68a" stroke-width="1.5"/>
+  <text x="344" y="322" font-family="sans-serif" font-size="18">🎨</text>
+  <text x="374" y="320" font-family="sans-serif" font-size="11" font-weight="700" fill="#854d0e">6 Templates</text>
+  <text x="374" y="333" font-family="sans-serif" font-size="9" fill="#94a3b8">All ATS-approved</text>
+</svg>
+    </div>
+
+  </section>
+
+  <section class="section" id="main-content" role="main" white-section">
+    <h2 class="section-title">Why Choose Resume Flow?</h2>
+    <p class="section-sub">Everything a student needs to land their first job</p>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Fast &amp; Easy</h3>
+        <p>Fill in your details and get a professional resume in just a few minutes. No design skills needed.</p>
+      </div>  
+
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>ATS Friendly</h3>
+        <p>Our templates pass Applicant Tracking Systems used by top companies like TCS, Infosys, Google.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🎨</div>
+        <h3>6 Templates</h3>
+        <p>Choose from professional templates made for freshers, engineers, designers, and more.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">🆓</div>
+        <h3>Free to Start</h3>
+        <p>Start building completely free. No credit card or signup needed to get started today.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section grey-section">
+    <h2 class="section-title">How It Works</h2>
+    <p class="section-sub">Three simple steps to your professional resume</p>
+
+    <div class="steps-grid">
+
+      <div class="step-card">
+        <div class="step-num">1</div>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <rect width="240" height="160" rx="12" fill="#eff6ff"/>
+  
+  <rect x="20" y="18" width="200" height="124" rx="10" fill="#ffffff" stroke="#bfdbfe" stroke-width="1.5"/>
+  
+  <rect x="36" y="30" width="90" height="9" rx="3" fill="#1e3560"/>
+  
+  <rect x="36" y="48" width="60" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="36" y="58" width="168" height="18" rx="6" fill="#f8fafc" stroke="#bfdbfe" stroke-width="1.5"/>
+  
+  <rect x="36" y="84" width="50" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="36" y="94" width="168" height="18" rx="6" fill="#f8fafc" stroke="#bfdbfe" stroke-width="1.5"/>
+  
+  <rect x="36" y="120" width="80" height="14" rx="7" fill="#1a56db"/>
+  
+  <g transform="translate(170,38) rotate(30)">
+    <rect x="-4" y="-12" width="8" height="20" rx="2" fill="#f59e0b"/>
+    <polygon points="-4,8 4,8 0,14" fill="#f59e0b"/>
+    <rect x="-4" y="-12" width="8" height="5" rx="2" fill="#334155"/>
+  </g>
+</svg>
+        <h3>Fill Your Details</h3>
+        <p>Enter your name, education, skills, and projects in our easy form.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <rect width="240" height="160" rx="12" fill="#f0fdf4"/>
+
+  <rect x="16" y="22" width="62" height="116" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="16" y="22" width="62" height="12" rx="4" fill="#cbd5e1"/>
+  <rect x="22" y="42" width="50" height="5" rx="2" fill="#e2e8f0"/>
+  <rect x="22" y="52" width="42" height="5" rx="2" fill="#e2e8f0"/>
+  <rect x="22" y="62" width="48" height="5" rx="2" fill="#e2e8f0"/>
+  <rect x="22" y="72" width="36" height="5" rx="2" fill="#e2e8f0"/>
+  
+  <rect x="88" y="14" width="66" height="132" rx="8" fill="#ffffff" stroke="#1a56db" stroke-width="3"/>
+  
+  <circle cx="121" cy="14" r="10" fill="#1a56db"/>
+  <text x="121" y="18" font-family="sans-serif" font-size="11" text-anchor="middle" fill="white">✓</text>
+  <rect x="88" y="14" width="66" height="14" rx="4" fill="#1a56db"/>
+  <rect x="96" y="36" width="52" height="6" rx="2" fill="#1e3560"/>
+  <rect x="96" y="47" width="42" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="96" y="57" width="48" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="96" y="67" width="38" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="96" y="77" width="44" height="5" rx="2" fill="#1a56db" opacity="0.4"/>
+  <rect x="96" y="87" width="52" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="96" y="97" width="40" height="5" rx="2" fill="#cbd5e1"/>
+  
+  <rect x="164" y="22" width="62" height="116" rx="8" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <rect x="164" y="22" width="62" height="12" rx="4" fill="#334155"/>
+  <rect x="170" y="42" width="50" height="5" rx="2" fill="#e2e8f0"/>
+  <rect x="170" y="52" width="42" height="5" rx="2" fill="#e2e8f0"/>
+  <rect x="170" y="62" width="48" height="5" rx="2" fill="#e2e8f0"/>
+  <rect x="170" y="72" width="36" height="5" rx="2" fill="#e2e8f0"/>
+</svg>
+        <h3>Choose a Template</h3>
+        <p>Pick from clean, professional templates designed for freshers.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 160" width="240" height="160">
+  <rect width="240" height="160" rx="12" fill="#fef9c3"/>
+  
+  <rect x="20" y="14" width="130" height="132" rx="8" fill="#ffffff" stroke="#fde68a" stroke-width="1.5"/>
+  <rect x="20" y="14" width="130" height="10" rx="4" fill="#1a56db"/>
+  <rect x="32" y="32" width="80" height="8" rx="2" fill="#1e3560"/>
+  <rect x="32" y="46" width="60" height="5" rx="2" fill="#1a56db" opacity="0.6"/>
+  <rect x="32" y="58" width="106" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="32" y="67" width="90" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="32" y="80" width="55" height="5" rx="2" fill="#1a56db"/>
+  <rect x="32" y="90" width="106" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="32" y="99" width="80" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="32" y="112" width="55" height="5" rx="2" fill="#1a56db"/>
+  <rect x="32" y="122" width="106" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="32" y="131" width="90" height="4" rx="2" fill="#e2e8f0"/>
+  
+  <circle cx="185" cy="80" r="40" fill="#16a34a" filter="url(#glw)"/>
+  <defs>
+    <filter id="glw" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#16a34a" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <line x1="185" y1="58" x2="185" y2="86" stroke="white" stroke-width="5" stroke-linecap="round"/>
+  <polyline points="171,76 185,92 199,76" fill="none" stroke="white" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <rect x="162" y="104" width="46" height="14" rx="7" fill="rgba(255,255,255,0.25)"/>
+  <text x="185" y="115" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="white">PDF</text>
+</svg>
+        <h3>Download &amp; Apply</h3>
+        <p>Download as PDF and start applying to your dream companies.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section white-section">
+    <h2 class="section-title">What Students Say</h2>
+
+    <div class="testimonials-grid">
+
+      <div class="testimonial-card">
+        <p class="stars">★★★★★</p>
+        <p class="t-text">"I got my first interview call within a week of using this resume builder. The ATS tips are super helpful!"</p>
+        <div class="t-author">
+          <span class="t-avatar">👩‍💻</span>
+          <div>
+            <p class="t-name">Priya Sharma</p>
+            <p class="t-role">B.Tech CSE, 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="stars">★★★★★</p>
+        <p class="t-text">"Very simple to use. I built my resume in 15 minutes and got shortlisted for TCS campus placement!"</p>
+        <div class="t-author">
+          <span class="t-avatar">👨‍🎓</span>
+          <div>
+            <p class="t-name">Rahul Verma</p>
+            <p class="t-role">B.Tech ECE, 2024</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <p class="stars">★★★★★</p>
+        <p class="t-text">"The templates look very professional. My seniors couldn't believe I made it myself in minutes!"</p>
+        <div class="t-author">
+          <span class="t-avatar">👩‍🔬</span>
+          <div>
+            <p class="t-name">Ananya Gupta</p>
+            <p class="t-role">BCA Student, 2024</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to Build Your Resume?</h2>
+    <p>Join 50,000+ students who already created their resumes with Resume Flow.</p>
+    <a href="build-resume.html" class="btn-primary">Get Started for Free →</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="footer-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial; margin-bottom: 12px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="9" fill="url(#logo-grad-foot)" />
+            <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="logo-grad-foot" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a855f7" />
+                <stop offset="1" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; letter-spacing: -0.5px; display: flex; align-items: center;">
+            Resume<span style="color: #a855f7; margin-left: 1px;">Flow</span>
+          </span>
+        </div>
+        <p class="footer-about">Helping students and freshers build resumes that actually get noticed by recruiters.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="learn-ats.html">Learn ATS</a>
+        <a href="templates.html">Templates</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Account</h4>
+        <a href="login.html">Login / Sign Up</a>
+        <a href="dashboard.html">Dashboard</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="about.html">About Us</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="build-resume.html">Build Resume</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📧 hello@smartresume.in</p>
+        <p>📱 +91 98765 43210</p>
+        <p>📍 India (Remote)</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Resume Flow. Made with ❤️ for Indian Students.</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

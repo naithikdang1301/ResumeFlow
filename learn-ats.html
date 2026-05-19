@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn ATS - Resume Flow</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <nav class="navbar">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-cb">
+    <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial;">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="9" fill="url(#logo-grad-nav)" />
+        <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <defs>
+          <linearGradient id="logo-grad-nav" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a855f7" />
+            <stop offset="1" stop-color="#6366f1" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #1e1b4b; letter-spacing: -0.5px; display: flex; align-items: center;">
+        Resume<span style="color: #6d28d9; margin-left: 1px;">Flow</span>
+      </span>
+    </a>
+    <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learn-ats.html" class="active">Learn ATS</a></li>
+      <li><a href="templates.html">Templates</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="login.html" id="navLoginLink">Login</a></li>
+      <li><a href="#" id="navLogoutLink" style="display:none" onclick="logoutUser();return false;">Logout</a></li>
+      <li><a href="build-resume.html" class="nav-cta">Build Resume</a></li>
+    </ul>
+  </nav>
+
+  <section class="page-header">
+    <h1>📊 Learn About ATS</h1>
+    <p>Understand how companies scan resumes — and how to make sure yours passes</p>
+  </section>
+
+  <section class="section" id="main-content" role="main" white-section">
+    <div class="ats-intro-layout">
+
+      <div class="ats-intro-text">
+        <h2>🤖 What is an ATS?</h2>
+        <p>
+          <strong>ATS stands for Applicant Tracking System.</strong> It is a software
+          that companies use to automatically scan, filter, and sort resumes before
+          a human recruiter even looks at them.
+        </p>
+        <p>
+          Big companies like Google, Amazon, TCS, Infosys receive thousands of
+          resumes every day. It is impossible for a human to read each one. So they
+          use ATS software to do the first round of filtering automatically.
+        </p>
+        <p>
+          If your resume does not pass the ATS scan, it gets <strong>rejected
+          automatically</strong> — even if you are the most qualified candidate!
+        </p>
+        
+        <div class="warning-box">
+          ⚠️ <strong>Did you know?</strong> About 75% of resumes are rejected by
+          ATS software before any human ever reads them.
+        </div>
+      </div>
+
+      <div class="ats-intro-img">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" width="420" height="300">
+  <defs>
+    <filter id="s1"><feDropShadow dx="0" dy="4" stdDeviation="10" flood-opacity="0.1"/></filter>
+    <filter id="s2"><feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#1a56db" flood-opacity="0.2"/></filter>
+  </defs>
+  <rect width="420" height="300" rx="16" fill="#f0f4fa"/>
+
+  <rect x="18" y="24" width="140" height="250" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#s1)"/>
+  <rect x="18" y="24" width="140" height="8" rx="4" fill="#1a56db"/>
+  <rect x="30" y="42" width="80" height="10" rx="3" fill="#1e3560"/>
+  <rect x="30" y="58" width="60" height="6" rx="2" fill="#1a56db" opacity="0.7"/>
+  <rect x="30" y="72" width="116" height="1" fill="#e2e8f0"/>
+  <rect x="30" y="80" width="50" height="6" rx="2" fill="#1a56db"/>
+  <rect x="30" y="91" width="116" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="101" width="100" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="114" width="116" height="1" fill="#e2e8f0"/>
+  <rect x="30" y="122" width="50" height="6" rx="2" fill="#1a56db"/>
+  <rect x="30" y="134" width="116" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="144" width="90" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="154" width="110" height="5" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="167" width="116" height="1" fill="#e2e8f0"/>
+  <rect x="30" y="175" width="50" height="6" rx="2" fill="#1a56db"/>
+  <rect x="30" y="187" width="46" height="16" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="82" y="187" width="42" height="16" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="30" y="208" width="40" height="16" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="76" y="208" width="48" height="16" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <rect x="30" y="232" width="116" height="1" fill="#e2e8f0"/>
+  <rect x="30" y="241" width="50" height="6" rx="2" fill="#1a56db"/>
+  <rect x="30" y="252" width="116" height="5" rx="2" fill="#cbd5e1"/>
+
+  <line x1="168" y1="150" x2="200" y2="150" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="5,4"/>
+  <polygon points="196,144 208,150 196,156" fill="#94a3b8"/>
+
+  <circle cx="250" cy="150" r="55" fill="#1a56db" filter="url(#s2)"/>
+  <circle cx="250" cy="150" r="44" fill="#1339a0"/>
+  
+  <rect x="226" y="130" width="48" height="36" rx="6" fill="#1a56db"/>
+  
+  <circle cx="238" cy="145" r="6" fill="white"/>
+  <circle cx="262" cy="145" r="6" fill="white"/>
+  <circle cx="240" cy="146" r="3" fill="#1339a0"/>
+  <circle cx="264" cy="146" r="3" fill="#1339a0"/>
+  
+  <rect x="234" y="156" width="32" height="4" rx="2" fill="#93c5fd"/>
+  
+  <line x1="250" y1="124" x2="250" y2="108" stroke="white" stroke-width="2.5"/>
+  <circle cx="250" cy="105" r="5" fill="#f59e0b"/>
+  
+  <line x1="210" y1="138" x2="195" y2="132" stroke="#93c5fd" stroke-width="1.5" opacity="0.6"/>
+  <line x1="210" y1="150" x2="195" y2="150" stroke="#93c5fd" stroke-width="1.5" opacity="0.6"/>
+  <line x1="210" y1="162" x2="195" y2="168" stroke="#93c5fd" stroke-width="1.5" opacity="0.6"/>
+  
+  <text x="250" y="200" font-family="sans-serif" font-size="11" font-weight="700" text-anchor="middle" fill="white">ATS SYSTEM</text>
+
+  <line x1="305" y1="150" x2="334" y2="150" stroke="#94a3b8" stroke-width="2.5" stroke-dasharray="5,4"/>
+  <polygon points="330,144 342,150 330,156" fill="#94a3b8"/>
+
+  <rect x="342" y="80" width="62" height="140" rx="10" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.5" filter="url(#s1)"/>
+  
+  <circle cx="373" cy="122" r="26" fill="none" stroke="#e2e8f0" stroke-width="5"/>
+  <circle cx="373" cy="122" r="26" fill="none" stroke="#16a34a" stroke-width="5" stroke-dasharray="138 163" stroke-dashoffset="41" stroke-linecap="round"/>
+  <text x="373" y="119" font-family="sans-serif" font-size="12" font-weight="700" text-anchor="middle" fill="#16a34a">92%</text>
+  <text x="373" y="131" font-family="sans-serif" font-size="7" text-anchor="middle" fill="#94a3b8">SCORE</text>
+  
+  <rect x="352" y="156" width="42" height="18" rx="9" fill="#dcfce7"/>
+  <text x="373" y="169" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#16a34a">PASSED</text>
+  
+  <rect x="354" y="182" width="38" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="354" y="191" width="30" height="4" rx="2" fill="#e2e8f0"/>
+  <rect x="354" y="200" width="34" height="4" rx="2" fill="#e2e8f0"/>
+
+  <rect x="100" y="280" width="220" height="12" rx="4" fill="#dbeafe"/>
+  <text x="210" y="289" font-family="sans-serif" font-size="9" font-weight="700" text-anchor="middle" fill="#1a56db">75% of resumes are rejected by ATS before a human sees them</text>
+</svg>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section grey-section">
+    <h2 class="section-title">How ATS Scans Your Resume</h2>
+
+    <div class="flow-row">
+
+      <div class="flow-box">
+        <div class="flow-icon">📤</div>
+        <p>You Submit Resume</p>
+      </div>
+
+      <div class="flow-arrow">→</div>
+
+      <div class="flow-box">
+        <div class="flow-icon">🤖</div>
+        <p>ATS Reads the File</p>
+      </div>
+
+      <div class="flow-arrow">→</div>
+
+      <div class="flow-box">
+        <div class="flow-icon">🔍</div>
+        <p>Keywords Are Checked</p>
+      </div>
+
+      <div class="flow-arrow">→</div>
+
+      <div class="flow-box">
+        <div class="flow-icon">📊</div>
+        <p>Resume is Scored</p>
+      </div>
+
+      <div class="flow-arrow">→</div>
+
+      <div class="flow-box green-box">
+        <div class="flow-icon">✅</div>
+        <p>Passed to Recruiter</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section white-section">
+    <h2 class="section-title">What Does ATS Look For?</h2>
+
+    <div class="info-grid">
+
+      <div class="info-card blue-card">
+        <h3>📝 Keywords</h3>
+        <p>
+          ATS looks for specific words that match the job description. If the job
+          says "Python Developer" and your resume says "I know coding", ATS misses
+          it. Always use exact words from the job posting in your resume.
+        </p>
+      </div>
+
+      <div class="info-card blue-card">
+        <h3>📋 Resume Format</h3>
+        <p>
+          ATS reads plain text. Fancy tables, images, text boxes, and decorative
+          fonts confuse the software. A simple, single-column layout always works
+          best with all ATS systems.
+        </p>
+      </div>
+
+      <div class="info-card blue-card">
+        <h3>🏷️ Section Headings</h3>
+        <p>
+          ATS looks for standard headings like "Education", "Skills", "Experience",
+          "Projects". Using creative names like "My Story" instead of "Experience"
+          can confuse the ATS system.
+        </p>
+      </div>
+
+      <div class="info-card blue-card">
+        <h3>📊 Match Score</h3>
+        <p>
+          Each resume receives a score based on keyword matches with the job
+          description. Only high-scoring resumes are sent to the human recruiter.
+          A score above 70% is usually considered a good match.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section grey-section">
+    <h2 class="section-title">✅ Tips to Make an ATS-Friendly Resume</h2>
+
+    <div class="tips-list">
+
+      <div class="tip-item">
+        <div class="tip-num">1</div>
+        <div class="tip-body">
+          <h3>Use Keywords from the Job Description</h3>
+          <p>Read the job posting carefully. Copy important skill words (e.g., "React.js", "Machine Learning", "SQL") into your resume exactly as written.</p>
+        </div>
+      </div>
+
+      <div class="tip-item">
+        <div class="tip-num">2</div>
+        <div class="tip-body">
+          <h3>Use Standard Section Headings</h3>
+          <p>Always use common headings: <strong>Education, Work Experience, Skills, Projects, Certifications</strong>. Avoid creative or unusual section names.</p>
+        </div>
+      </div>
+
+      <div class="tip-item">
+        <div class="tip-num">3</div>
+        <div class="tip-body">
+          <h3>Keep the Format Simple and Clean</h3>
+          <p>Avoid tables, columns, graphics, and images. Use a single-column layout with clear plain text. ATS reads top to bottom, left to right.</p>
+        </div>
+      </div>
+
+      <div class="tip-item">
+        <div class="tip-num">4</div>
+        <div class="tip-body">
+          <h3>Use a Standard Font</h3>
+          <p>Use common fonts like Arial, Calibri, or Times New Roman. Decorative or handwritten fonts may not be read correctly by ATS software.</p>
+        </div>
+      </div>
+
+      <div class="tip-item">
+        <div class="tip-num">5</div>
+        <div class="tip-body">
+          <h3>Don't Put Key Info in Headers or Footers</h3>
+          <p>Many ATS systems skip the header and footer areas. Always put your name, email, and phone number in the main body of the resume.</p>
+        </div>
+      </div>
+
+      <div class="tip-item">
+        <div class="tip-num">6</div>
+        <div class="tip-body">
+          <h3>Save as PDF or DOCX</h3>
+          <p>Save your resume as a PDF or .docx file. These formats are the most compatible with ATS systems. Never save as an image file like .jpg or .png.</p>
+        </div>
+      </div>
+
+      <div class="tip-item">
+        <div class="tip-num">7</div>
+        <div class="tip-body">
+          <h3>Write Full Forms with Abbreviations</h3>
+          <p>Write both the full word and abbreviation: "Machine Learning (ML)". This way the ATS catches both versions when a recruiter searches for either one.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section white-section">
+    <h2 class="section-title">Quick Reference: Do's &amp; Don'ts</h2>
+
+    <div class="dos-donts">
+
+      <div class="do-box">
+        <h3 class="do-title">✅ DO's</h3>
+        <ul class="check-list">
+          <li>Use simple, single-column formatting</li>
+          <li>Include keywords from the job description</li>
+          <li>Use standard section headings</li>
+          <li>Use bullet points for achievements</li>
+          <li>Keep resume to 1–2 pages only</li>
+          <li>Use a professional email address</li>
+          <li>Mention measurable results where possible</li>
+          <li>Proofread for spelling mistakes</li>
+        </ul>
+      </div>
+
+      <div class="dont-box">
+        <h3 class="dont-title">❌ DON'Ts</h3>
+        <ul class="cross-list">
+          <li>Don't use tables or multi-column layouts</li>
+          <li>Don't add photos, logos, or graphics</li>
+          <li>Don't use decorative or fancy fonts</li>
+          <li>Don't put contact info in the header/footer</li>
+          <li>Don't use text boxes or shapes</li>
+          <li>Don't use personal pronouns (I, me, my)</li>
+          <li>Don't lie or exaggerate your skills</li>
+          <li>Don't use the same resume for every job</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to Build an ATS-Friendly Resume?</h2>
+    <p>Our builder follows all ATS guidelines automatically.</p>
+    <a href="build-resume.html" class="btn-primary">Build My Resume Now →</a>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-col">
+        <div class="footer-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial; margin-bottom: 12px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="9" fill="url(#logo-grad-foot)" />
+            <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="logo-grad-foot" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a855f7" />
+                <stop offset="1" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; letter-spacing: -0.5px; display: flex; align-items: center;">
+            Resume<span style="color: #a855f7; margin-left: 1px;">Flow</span>
+          </span>
+        </div>
+        <p class="footer-about">Helping students and freshers build resumes that actually get noticed.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="learn-ats.html">Learn ATS</a>
+        <a href="templates.html">Templates</a>
+        <a href="pricing.html">Pricing</a>
+      </div>
+      <div class="footer-col">
+        <h4>More</h4>
+        <a href="about.html">About Us</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="build-resume.html">Build Resume</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p>📧 hello@smartresume.in</p>
+        <p>📱 +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Resume Flow. Made with ❤️ for Indian Students.</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>

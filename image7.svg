@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 440" width="340" height="440">
+  <!-- Modern Blue Template -->
+  <rect width="340" height="440" fill="#ffffff" rx="4"/>
+  <!-- Blue header band -->
+  <rect width="340" height="90" fill="#1a56db" rx="0"/>
+  <!-- Name in header -->
+  <rect x="30" y="24" width="180" height="18" rx="3" fill="#ffffff"/>
+  <!-- Job title in header -->
+  <rect x="30" y="50" width="130" height="9" rx="2" fill="rgba(255,255,255,0.65)"/>
+  <!-- Contact row in header -->
+  <rect x="30" y="68" width="70" height="7" rx="2" fill="rgba(255,255,255,0.45)"/>
+  <rect x="110" y="68" width="70" height="7" rx="2" fill="rgba(255,255,255,0.45)"/>
+  <rect x="190" y="68" width="70" height="7" rx="2" fill="rgba(255,255,255,0.45)"/>
+  <!-- Section: Objective -->
+  <rect x="30" y="108" width="90" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="106" width="3" height="13" rx="1" fill="#1a56db"/>
+  <rect x="30" y="124" width="280" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="136" width="240" height="7" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="148" width="260" height="7" rx="2" fill="#cbd5e1"/>
+  <!-- Blue left accent bar under section -->
+  <rect x="30" y="165" width="280" height="2" fill="#bfdbfe"/>
+  <!-- Section: Education -->
+  <rect x="30" y="176" width="80" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="175" width="3" height="13" rx="1" fill="#1a56db"/>
+  <rect x="30" y="192" width="200" height="8" rx="2" fill="#334155"/>
+  <rect x="240" y="192" width="70" height="8" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="206" width="150" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="218" width="110" height="6" rx="2" fill="#94a3b8"/>
+  <rect x="30" y="232" width="280" height="2" fill="#bfdbfe"/>
+  <!-- Section: Skills -->
+  <rect x="30" y="243" width="55" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="242" width="3" height="13" rx="1" fill="#1a56db"/>
+  <!-- Skill bars -->
+  <rect x="30" y="259" width="280" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="30" y="259" width="210" height="6" rx="3" fill="#1a56db"/>
+  <rect x="30" y="272" width="280" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="30" y="272" width="180" height="6" rx="3" fill="#1a56db"/>
+  <rect x="30" y="285" width="280" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="30" y="285" width="240" height="6" rx="3" fill="#1a56db"/>
+  <rect x="30" y="298" width="280" height="6" rx="3" fill="#e2e8f0"/>
+  <rect x="30" y="298" width="160" height="6" rx="3" fill="#1a56db"/>
+  <rect x="30" y="315" width="280" height="2" fill="#bfdbfe"/>
+  <!-- Section: Projects -->
+  <rect x="30" y="326" width="65" height="9" rx="2" fill="#1a56db"/>
+  <rect x="30" y="325" width="3" height="13" rx="1" fill="#1a56db"/>
+  <rect x="30" y="343" width="200" height="8" rx="2" fill="#334155"/>
+  <rect x="30" y="357" width="280" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="368" width="240" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="384" width="180" height="8" rx="2" fill="#334155"/>
+  <rect x="30" y="398" width="280" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="409" width="200" height="6" rx="2" fill="#cbd5e1"/>
+  <rect x="30" y="420" width="250" height="6" rx="2" fill="#cbd5e1"/>
+</svg>

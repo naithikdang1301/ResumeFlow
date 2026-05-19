@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Resume – Resume Flow</title>
+  <meta name="description" content="Build a professional ATS-friendly resume in minutes. Free resume builder for Indian students and freshers.">
+  <meta property="og:title" content="Build Resume – Resume Flow">
+  <meta property="og:description" content="Create your job-winning resume in minutes. ATS-optimised templates.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#6d28d9">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <div class="auth-modal-overlay hidden" id="authModal">
+    <div class="auth-modal">
+      <button class="auth-modal-close" id="closeModal" title="Close">&#x2715;</button>
+      <div class="auth-modal-icon">&#x1F510;</div>
+      <h2>Login Required</h2>
+      <p>
+        You need a free account to build and save your resume.<br>
+        Sign up takes only 30 seconds — no credit card needed!
+      </p>
+      <div class="auth-modal-btns">
+        <a href="login.html" class="btn-primary">&#x1F680; Sign Up Free</a>
+        <a href="login.html" class="btn-ghost">Login</a>
+      </div>
+      <p class="auth-modal-note">
+        Already have an account? <a href="login.html">Log in here &rarr;</a>
+      </p>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-cb">
+    <a href="index.html" class="nav-logo" style="display: flex; align-items: center; gap: 8px; background: none; -webkit-text-fill-color: initial;">
+      <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="32" height="32" rx="9" fill="url(#logo-grad-nav)" />
+        <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <defs>
+          <linearGradient id="logo-grad-nav" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#a855f7" />
+            <stop offset="1" stop-color="#6366f1" />
+          </linearGradient>
+        </defs>
+      </svg>
+      <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #1e1b4b; letter-spacing: -0.5px; display: flex; align-items: center;">
+        Resume<span style="color: #6d28d9; margin-left: 1px;">Flow</span>
+      </span>
+    </a>
+    <label for="nav-toggle" class="hamburger"><span></span><span></span><span></span></label>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="learn-ats.html">Learn ATS</a></li>
+      <li><a href="templates.html">Templates</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="login.html" id="navLoginLink">Login</a></li>
+      <li><a href="#" id="navLogoutLink" style="display:none" onclick="logoutUser();return false;">Logout</a></li>
+      <li><a href="build-resume.html" class="nav-cta active">Build Resume</a></li>
+    </ul>
+  </nav>
+
+  <header class="page-header small-page-header">
+    <h1>&#x1F527; Build Your Resume</h1>
+    <p class="page-header-sub">Fill each section &middot; pick a template &middot; see it live on the right</p>
+  </header>
+
+  <div class="step-bar">
+    <a href="#step-personal"  class="step-pill active-step">1 &middot; Personal Info</a>
+    <span class="step-sep">&rsaquo;</span>
+    <a href="#step-education" class="step-pill">2 &middot; Education</a>
+    <span class="step-sep">&rsaquo;</span>
+    <a href="#step-skills"    class="step-pill">3 &middot; Skills &amp; Projects</a>
+    <span class="step-sep">&rsaquo;</span>
+    <a href="#step-preview"   class="step-pill">4 &middot; Preview &amp; Download</a>
+  </div>
+
+  <div class="form-progress-wrap" role="progressbar" aria-label="Resume completion progress" aria-valuemin="0" aria-valuemax="100">
+    <div class="form-progress-track">
+      <div id="formProgressBar"></div>
+    </div>
+    <span id="formProgressPct">0% complete</span>
+  </div>
+
+  <div class="builder-layout" id="main-content" role="main">
+
+    <div class="builder-form-col">
+
+      <div id="step-personal" class="form-step step-default">
+        <h3 class="form-step-title">Step 1 &middot; Personal Information</h3>
+
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" aria-required="true" aria-describedby="fullName-err" placeholder="e.g. Arjun Sharma" required autocomplete="name">
+          <span class="err-msg" id="fullName-err" role="alert"></span>
+        </div>
+        <div class="form-group">
+          <label for="jobTitle">Job Title / Target Role</label>
+          <input type="text" id="jobTitle" placeholder="e.g. Software Developer Fresher">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" aria-required="true" aria-describedby="email-err" placeholder="e.g. arjun@gmail.com" required autocomplete="email">
+          <span class="err-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number * <small>(10 digits only, numbers only)</small></label>
+          <input type="tel" id="phone" aria-required="true" aria-describedby="phone-err" placeholder="e.g. 9876543210"
+                 maxlength="10" pattern="[0-9]{10}" inputmode="numeric" required>
+          <span class="err-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="location">Location</label>
+          <input type="text" id="location" placeholder="e.g. Bangalore, Karnataka">
+        </div>
+        <div class="form-group">
+          <label for="linkedin">LinkedIn Profile (Optional)</label>
+          <input type="text" id="linkedin" placeholder="e.g. linkedin.com/in/arjunsharma">
+        </div>
+        <div class="form-group">
+          <label for="summary">Career Objective / Summary</label>
+          <textarea id="summary" rows="4" maxlength="400"
+            placeholder="Write 2-3 lines about your career goals and what you bring..."></textarea>
+          <span class="char-count">0/400 characters</span>
+        </div>
+        <a href="#step-education" class="btn-primary">Next: Education &rarr;</a>
+      </div>
+
+      <div id="step-education" class="form-step">
+        <h3 class="form-step-title">Step 2 &middot; Education</h3>
+        <div class="form-group">
+          <label for="degree">Degree / Course *</label>
+          <input type="text" id="degree" placeholder="e.g. B.Tech in Computer Science" required>
+        </div>
+        <div class="form-group">
+          <label for="college">College / University *</label>
+          <input type="text" id="college" placeholder="e.g. ABC Institute of Technology" required>
+        </div>
+        <div class="form-group">
+          <label for="gradYear">Year of Passing *</label>
+          <input type="number" id="gradYear" placeholder="e.g. 2025"
+                 min="2000" max="2035" inputmode="numeric">
+          <span class="err-msg"></span>
+        </div>
+        <div class="form-group">
+          <label for="cgpa">CGPA / Percentage</label>
+          <input type="text" id="cgpa" placeholder="e.g. 8.5 CGPA or 85%">
+        </div>
+        <div class="form-group">
+          <label for="class12">12th Class School &amp; Year</label>
+          <input type="text" id="class12" placeholder="e.g. XYZ Sr. Sec. School, 2021 &mdash; 88%">
+        </div>
+        <div class="form-group">
+          <label for="class10">10th Class School &amp; Year</label>
+          <input type="text" id="class10" placeholder="e.g. ABC High School, 2019 &mdash; 90%">
+        </div>
+        <div class="form-step-nav">
+          <a href="#step-personal"  class="btn-ghost">&larr; Back</a>
+          <a href="#step-skills"    class="btn-primary">Next: Skills &rarr;</a>
+        </div>
+      </div>
+
+      <div id="step-skills" class="form-step">
+        <h3 class="form-step-title">Step 3 &middot; Skills &amp; Projects</h3>
+        <div class="form-group">
+          <label for="techSkills">Technical Skills *</label>
+          <textarea id="techSkills" rows="3"
+            placeholder="e.g. Python, Java, C++, HTML, CSS, JavaScript, MySQL"></textarea>
+          <small>Separate each skill with a comma</small>
+        </div>
+        <div class="form-group">
+          <label for="softSkills">Soft Skills</label>
+          <textarea id="softSkills" rows="2"
+            placeholder="e.g. Teamwork, Communication, Problem Solving"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="p1title">Project 1 &mdash; Title</label>
+          <input type="text" id="p1title" placeholder="e.g. Student Result Management System">
+        </div>
+        <div class="form-group">
+          <label for="p1desc">Project 1 &mdash; Description</label>
+          <textarea id="p1desc" rows="3"
+            placeholder="What it does, technologies used, your role..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="p2title">Project 2 &mdash; Title (Optional)</label>
+          <input type="text" id="p2title" placeholder="e.g. Weather App using OpenWeather API">
+        </div>
+        <div class="form-group">
+          <label for="p2desc">Project 2 &mdash; Description</label>
+          <textarea id="p2desc" rows="3" placeholder="What it does, technologies used..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="certs">Certifications (Optional)</label>
+          <textarea id="certs" rows="2"
+            placeholder="e.g. Python for Everybody &mdash; Coursera (2024)"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="activities">Extra-Curricular Activities (Optional)</label>
+          <textarea id="activities" rows="2"
+            placeholder="e.g. Organised college tech fest &middot; Member of coding club"></textarea>
+        </div>
+        <div class="form-step-nav">
+          <a href="#step-education" class="btn-ghost">&larr; Back</a>
+          <a href="#step-preview"   class="btn-primary">Preview Resume &rarr;</a>
+        </div>
+      </div>
+
+      <div id="step-preview" class="form-step">
+        <div class="done-box">
+          <span class="done-icon">&#x1F389;</span>
+          <h3>Your Resume is Ready!</h3>
+          <p>Check the live preview on the right. Switch templates above the preview.</p>
+          <div class="done-btns">
+            <a href="#" onclick="downloadResume(); return false;" class="btn-primary">&#x2B07;&#xFE0F; Download as PDF</a>
+            <a href="#" id="saveResumeBtn" class="btn-ghost">&#x1F4BE; Save Resume</a>
+            <a href="#step-personal" class="btn-ghost">&#x270F;&#xFE0F; Edit</a>
+          </div>
+        </div>
+        <div class="tips-reminder">
+          <h4>&#x1F4A1; Before you submit:</h4>
+          <ul>
+            <li>Check for spelling mistakes carefully</li>
+            <li>Ensure email and phone are correct</li>
+            <li>Use keywords from the actual job description</li>
+            <li>Keep to 1 page if less than 2 years experience</li>
+            <li>ATS prefers simple formatting &mdash; avoid tables in Word</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="preview-col" role="complementary" aria-label="Live resume preview" aria-live="polite">
+
+      <div class="preview-header-bar">
+        <span>&#x1F441;&#xFE0F; Live Resume Preview</span>
+        <span class="ats-score-badge" id="atsScoreBadge">&#x1F4CA; ATS Score: &mdash;</span>
+      </div>
+
+      <div class="tpl-selector-bar">
+        <span>Template:</span>
+        <button class="tpl-btn active" data-tpl="classic">Classic Clean</button>
+        <button class="tpl-btn" data-tpl="modern-blue">Modern Blue</button>
+        <button class="tpl-btn" data-tpl="dark-bold">Bold Dark</button>
+        <button class="tpl-btn" data-tpl="green-sidebar">Green Sidebar</button>
+        <button class="tpl-btn" data-tpl="minimal">Minimal</button>
+        <button class="tpl-btn" data-tpl="orange">Student Orange</button>
+      </div>
+
+      <div class="resume-doc" id="resumeDoc">
+
+        <div class="rdoc-head" id="rdocHeader">
+          <h1 class="rdoc-name" id="prev-name">Your Full Name</h1>
+          <p class="rdoc-role" id="prev-role">Job Title / Target Role</p>
+          <div class="rdoc-contact-row" id="prev-contact">
+            <span>&#x1F4E7; your@email.com</span>
+            <span>&#x1F4F1; 9876543210</span>
+            <span>&#x1F4CD; City, State</span>
+          </div>
+        </div>
+
+        <div class="rdoc-sidebar" id="rdocSidebar" style="display:none;">
+          <div>
+            <div class="rdoc-sidebar-name" id="sb-name">Your Name</div>
+            <div class="rdoc-sidebar-role" id="sb-role">Job Title</div>
+          </div>
+          <div>
+            <div class="rdoc-sidebar-section-title">Contact</div>
+            <div class="rdoc-sidebar-item" id="sb-email">&#x1F4E7; your@email.com</div>
+            <div class="rdoc-sidebar-item" id="sb-phone">&#x1F4F1; 9876543210</div>
+            <div class="rdoc-sidebar-item" id="sb-loc">&#x1F4CD; City, State</div>
+          </div>
+          <div>
+            <div class="rdoc-sidebar-section-title">Skills</div>
+            <div class="rdoc-sidebar-item" id="sb-skills">&mdash;</div>
+          </div>
+          <div>
+            <div class="rdoc-sidebar-section-title">Education</div>
+            <div class="rdoc-sidebar-item" id="sb-degree">&mdash;</div>
+            <div class="rdoc-sidebar-item" id="sb-year" style="font-size:11px;opacity:.7;"></div>
+          </div>
+        </div>
+
+        <div id="rdocMain">
+          <hr class="rdoc-divider">
+          <div class="rdoc-section">
+            <h2 class="rdoc-sec-title">Career Objective</h2>
+            <p class="rdoc-placeholder-text" id="prev-summary">Your career objective will appear here as you type.</p>
+          </div>
+          <hr class="rdoc-divider">
+          <div class="rdoc-section">
+            <h2 class="rdoc-sec-title">Education</h2>
+            <div class="rdoc-edu-row">
+              <div>
+                <strong id="prev-degree">B.Tech in Computer Science</strong>
+                <span class="rdoc-edu-college" id="prev-college"> &middot; ABC Institute of Technology</span>
+              </div>
+              <span class="rdoc-edu-year" id="prev-year">2025</span>
+            </div>
+            <p class="rdoc-small" id="prev-cgpa">CGPA: 8.5</p>
+          </div>
+          <hr class="rdoc-divider">
+          <div class="rdoc-section">
+            <h2 class="rdoc-sec-title">Technical Skills</h2>
+            <p class="rdoc-placeholder-text" id="prev-skills">Python &nbsp;&middot;&nbsp; Java &nbsp;&middot;&nbsp; HTML &nbsp;&middot;&nbsp; CSS &nbsp;&middot;&nbsp; JavaScript</p>
+            <p class="rdoc-small" id="prev-soft" style="margin-top:4px;"></p>
+          </div>
+          <hr class="rdoc-divider">
+          <div class="rdoc-section">
+            <h2 class="rdoc-sec-title">Projects</h2>
+            <div class="rdoc-project" id="prev-p1">
+              <strong>Student Result Management System</strong>
+              <p>A web app built with Python and MySQL. Includes login and PDF export.</p>
+            </div>
+            <div class="rdoc-project" id="prev-p2" style="display:none;"></div>
+          </div>
+          <hr class="rdoc-divider" id="certsDivider" style="display:none;">
+          <div class="rdoc-section" id="certsSection" style="display:none;">
+            <h2 class="rdoc-sec-title">Certifications</h2>
+            <p class="rdoc-small" id="prev-certs"></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+          <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="32" height="32" rx="9" fill="url(#logo-grad-foot)" />
+            <path d="M8 9.5H19" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 13.8H17" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 18.1H15" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M8 22.4H13" stroke="white" stroke-width="2.5" stroke-linecap="round" />
+            <path d="M20 11.5L25 16L20 20.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+            <defs>
+              <linearGradient id="logo-grad-foot" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a855f7" />
+                <stop offset="1" stop-color="#6366f1" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; letter-spacing: -0.5px;">
+            Resume<span style="color: #a855f7; margin-left: 1px;">Flow</span>
+          </span>
+        </div>
+        <p>Helping Indian students build job-winning resumes since 2024.</p>
+      </div>
+      <div class="footer-links-group">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a><a href="learn-ats.html">Learn ATS</a>
+        <a href="templates.html">Templates</a><a href="pricing.html">Pricing</a>
+        <a href="about.html">About</a><a href="dashboard.html">Dashboard</a>
+      </div>
+      <div class="footer-links-group">
+        <h4>Account</h4>
+        <a href="login.html">Login / Sign Up</a>
+        <a href="dashboard.html">My Dashboard</a>
+      </div>
+      <div class="footer-links-group">
+        <h4>Contact</h4>
+        <span>hello@smartresumebuilder.in</span>
+        <span>+91 98765 43210</span>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Resume Flow &middot; Made with &hearts; for Students &amp; Freshers in India</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+    /* ── helpers ─────────────────────────────────────────── */
+    const gVal  = id => document.getElementById(id)?.value?.trim() ?? '';
+    const el = id => document.getElementById(id);
+
+    /* ── AUTH GATE ───────────────────────────────────────── */
+    const showAuthModal  = () => el('authModal').classList.remove('hidden');
+    const closeAuthModal = () => el('authModal').classList.add('hidden');
+
+    el('closeModal').addEventListener('click', () => {
+      closeAuthModal();
+      if (typeof showToast === 'function') showToast('Sign up free to save your resume!', 'info');
+    });
+
+    // Re-gate any form interaction if not logged in
+    document.querySelector('.builder-form-col').addEventListener('focusin', () => {
+      if (typeof getAuthUser === 'function' && !getAuthUser()) showAuthModal();
+    });
+
+    // Show on load
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof getAuthUser === 'function' && !getAuthUser()) setTimeout(showAuthModal, 700);
+    });
+
+    /* ── TEMPLATE ENGINE ─────────────────────────────────── */
+    /*
+     * Each template is defined as a plain object with style maps.
+     * We apply styles DIRECTLY as inline styles — no CSS class dependency.
+     * This guarantees templates always visually change regardless of
+     * any CSS specificity conflicts.
+     */
+
+    const TEMPLATES = {
+
+      'classic': {
+        doc:     { background:'#ffffff', color:'#1e293b', padding:'36px', display:'block', borderRadius:'10px', borderTop:'6px solid #1a56db' },
+        header:  { display:'block', background:'transparent', padding:'0', margin:'0', borderBottom:'none', borderTop:'none', textAlign:'left' },
+        name:    { color:'#1e3560', fontFamily:"'Playfair Display',serif", fontSize:'26px', textAlign:'left' },
+        role:    { color:'#1a56db', fontWeight:'700', textAlign:'left' },
+        contact: { color:'#94a3b8', justifyContent:'flex-start' },
+        divider: { borderTop:'2px solid #e2e8f0', margin:'14px 0' },
+        secTitle:{ color:'#1a56db', borderLeft:'none', paddingLeft:'0', fontSize:'14px', letterSpacing:'1.5px', textTransform:'uppercase', borderBottom:'none' },
+        body:    { color:'#334155' },
+        sidebar: { display:'none' },
+        main:    { display:'block' },
+        hasSidebar: false,
+      },
+
+      'modern-blue': {
+        doc:     { background:'#ffffff', color:'#1e293b', padding:'36px', display:'block', borderRadius:'10px', borderTop:'none' },
+        header:  { display:'block', background:'#1a56db', padding:'28px 36px', margin:'-36px -36px 20px -36px', borderRadius:'10px 10px 0 0', borderBottom:'none', textAlign:'left' },
+        name:    { color:'#ffffff', fontFamily:"'Playfair Display',serif", fontSize:'26px', textAlign:'left' },
+        role:    { color:'rgba(255,255,255,0.85)', fontWeight:'700', textAlign:'left' },
+        contact: { color:'rgba(255,255,255,0.75)', justifyContent:'flex-start' },
+        divider: { borderTop:'2px solid #bfdbfe', margin:'14px 0' },
+        secTitle:{ color:'#1a56db', borderLeft:'3px solid #1a56db', paddingLeft:'8px', fontSize:'14px', letterSpacing:'1.5px', textTransform:'uppercase', borderBottom:'none' },
+        body:    { color:'#334155' },
+        sidebar: { display:'none' },
+        main:    { display:'block' },
+        hasSidebar: false,
+      },
+
+      'dark-bold': {
+        doc:     { background:'#ffffff', color:'#334155', padding:'36px', display:'block', borderRadius:'10px', borderTop:'none' },
+        header:  { display:'block', background:'#1e3560', padding:'28px 36px', margin:'-36px -36px 20px -36px', borderRadius:'10px 10px 0 0', borderTop:'5px solid #f59e0b', textAlign:'left' },
+        name:    { color:'#ffffff', fontFamily:"'Playfair Display',serif", fontSize:'26px', textAlign:'left' },
+        role:    { color:'rgba(255,255,255,0.7)', fontWeight:'700', textAlign:'left' },
+        contact: { color:'rgba(255,255,255,0.5)', justifyContent:'flex-start' },
+        divider: { borderTop:'1px solid #e2e8f0', margin:'14px 0' },
+        secTitle:{ color:'#1e3560', borderLeft:'4px solid #f59e0b', paddingLeft:'8px', fontSize:'14px', letterSpacing:'1.5px', textTransform:'uppercase', borderBottom:'none' },
+        body:    { color:'#334155' },
+        sidebar: { display:'none' },
+        main:    { display:'block' },
+        hasSidebar: false,
+      },
+
+      'green-sidebar': {
+        doc:     { background:'#ffffff', display:'flex', flexDirection:'row', padding:'0', overflow:'hidden', borderRadius:'10px', borderTop:'none' },
+        header:  { display:'none' },
+        name:    { color:'#15803d', fontFamily:"'Playfair Display',serif", fontSize:'26px', textAlign:'left' },
+        role:    { color:'#64748b', fontWeight:'700', textAlign:'left' },
+        contact: { color:'#64748b', justifyContent:'flex-start' },
+        divider: { borderTop:'2px solid #dcfce7', margin:'12px 0' },
+        secTitle:{ color:'#15803d', borderLeft:'none', paddingLeft:'0', fontSize:'14px', letterSpacing:'1.5px', textTransform:'uppercase', borderBottom:'none' },
+        body:    { color:'#334155' },
+        sidebar: { display:'flex', flexDirection:'column', gap:'20px', width:'210px', flexShrink:'0',
+                   background:'#15803d', padding:'28px 20px', overflowY:'auto', color:'#ffffff' },
+        main:    { flex:'1', padding:'28px 24px', overflowY:'auto', display:'block' },
+        hasSidebar: true,
+      },
+
+      'minimal': {
+        doc:     { background:'#ffffff', color:'#111111', padding:'36px', display:'block', borderRadius:'10px', borderTop:'3px solid #111111' },
+        header:  { display:'block', background:'transparent', padding:'0', margin:'0', textAlign:'center', borderBottom:'1px solid #e5e7eb', paddingBottom:'16px', marginBottom:'16px', borderTop:'none' },
+        name:    { color:'#111111', fontFamily:"'Space Grotesk',sans-serif", fontSize:'28px', letterSpacing:'-1px', textAlign:'center' },
+        role:    { color:'#64748b', fontWeight:'400', textAlign:'center' },
+        contact: { color:'#94a3b8', justifyContent:'center' },
+        divider: { borderTop:'1px solid #e2e8f0', margin:'12px 0' },
+        secTitle:{ color:'#111111', borderBottom:'none', paddingBottom:'0', borderLeft:'none', paddingLeft:'0', fontSize:'12px', letterSpacing:'3px', textTransform:'uppercase' },
+        body:    { color:'#334155' },
+        sidebar: { display:'none' },
+        main:    { display:'block' },
+        hasSidebar: false,
+      },
+
+      'orange': {
+        doc:     { background:'#ffffff', color:'#1e293b', padding:'36px', display:'block', borderRadius:'10px', borderTop:'8px solid #ea580c' },
+        header:  { display:'block', background:'transparent', padding:'0 0 16px 0', margin:'0 0 16px 0', borderBottom:'2px solid #ea580c', borderTop:'none', textAlign:'left' },
+        name:    { color:'#1e3560', fontFamily:"'Playfair Display',serif", fontSize:'26px', textAlign:'left' },
+        role:    { color:'#64748b', fontWeight:'700', textAlign:'left' },
+        contact: { color:'#94a3b8', justifyContent:'flex-start' },
+        divider: { borderTop:'2px solid #fed7aa', margin:'14px 0' },
+        secTitle:{ color:'#ea580c', borderLeft:'none', paddingLeft:'0', fontSize:'14px', letterSpacing:'1.5px', textTransform:'uppercase', borderBottom:'none' },
+        body:    { color:'#334155' },
+        sidebar: { display:'none' },
+        main:    { display:'block' },
+        hasSidebar: false,
+      },
+    };
+
+    /* currentTpl — tracks which template is active */
+    let currentTpl = 'classic';
+
+    /**
+     * applyStyleMap — sets multiple inline styles from a plain object
+     */
+    const applyStyleMap = (element, styles) => {
+      if (!element || !styles) return;
+      Object.entries(styles).forEach(([prop, val]) => {
+        element.style[prop] = val;
+      });
+    };
+
+    /**
+     * resetAllStyles — clears every inline style that templates touch
+     */
+    const resetAllStyles = () => {
+      const PROPS_DOC  = ['background','color','padding','display','flexDirection','overflow','borderRadius','borderTop'];
+      const PROPS_HEAD = ['background','padding','margin','borderRadius','borderBottom','borderTop','textAlign','paddingBottom','marginBottom'];
+      const PROPS_NAME = ['color','fontSize','fontFamily','letterSpacing','textAlign'];
+      const PROPS_ROLE = ['color','fontWeight','textAlign'];
+      const PROPS_CON  = ['color','justifyContent'];
+      const PROPS_SEC  = ['color','borderLeft','paddingLeft','fontSize','letterSpacing','textTransform','borderBottom','paddingBottom'];
+      const PROPS_SIDE = ['display','flexDirection','width','flexShrink','background','padding','overflowY','gap','color'];
+      const PROPS_MAIN = ['flex','padding','overflowY','display'];
+
+      const clear = (element, props) => {
+        if (!element) return;
+        props.forEach(p => { element.style[p] = ''; });
+      };
+
+      clear(el('resumeDoc'),   PROPS_DOC);
+      clear(el('rdocHeader'),  PROPS_HEAD);
+      clear(el('prev-name'),   PROPS_NAME);
+      clear(el('prev-role'),   PROPS_ROLE);
+      clear(el('prev-contact'),PROPS_CON);
+      clear(el('rdocMain'),    PROPS_MAIN);
+      clear(el('rdocSidebar'), PROPS_SIDE);
+
+      document.querySelectorAll('.rdoc-sec-title').forEach(t => clear(t, PROPS_SEC));
+      document.querySelectorAll('.rdoc-divider').forEach(d => { d.style.borderTop = ''; d.style.margin = ''; });
+      document.querySelectorAll('#rdocMain p, #rdocMain span, #rdocMain strong').forEach(t => { t.style.color = ''; });
+    };
+
+    /**
+     * applyTemplate — the main template switch function.
+     */
+    const applyTemplate = (tpl, skipFade = false) => {
+      const tplDef = TEMPLATES[tpl];
+      if (!tplDef) return;
+      currentTpl = tpl;
+
+      const docEl    = el('resumeDoc');
+      const headerEl = el('rdocHeader');
+      const nameEl   = el('prev-name');
+      const roleEl   = el('prev-role');
+      const contactEl= el('prev-contact');
+      const sidebarEl= el('rdocSidebar');
+      const mainEl   = el('rdocMain');
+      if (!docEl) return;
+
+      const doApply = () => {
+        resetAllStyles();
+
+        applyStyleMap(docEl,     tplDef.doc);
+        applyStyleMap(headerEl,  tplDef.header);
+        applyStyleMap(nameEl,    tplDef.name);
+        applyStyleMap(roleEl,    tplDef.role);
+        applyStyleMap(contactEl, tplDef.contact);
+        applyStyleMap(sidebarEl, tplDef.sidebar);
+        applyStyleMap(mainEl,    tplDef.main);
+
+        document.querySelectorAll('.rdoc-divider').forEach(d => {
+          d.style.border    = 'none';
+          d.style.borderTop = tplDef.divider.borderTop;
+          d.style.margin    = tplDef.divider.margin;
+        });
+        document.querySelectorAll('.rdoc-sec-title').forEach(t => {
+          applyStyleMap(t, tplDef.secTitle);
+        });
+
+        if (tplDef.hasSidebar) syncSidebar();
+      };
+
+      if (skipFade) {
+        doApply();
+      } else {
+        docEl.style.transition = 'opacity 0.18s ease, transform 0.18s ease';
+        docEl.style.opacity    = '0';
+        docEl.style.transform  = 'scale(0.98)';
+        setTimeout(() => {
+          doApply();
+          docEl.style.opacity   = '1';
+          docEl.style.transform = 'scale(1)';
+          setTimeout(() => { docEl.style.transition = ''; }, 250);
+        }, 180);
+      }
+    };
+
+    /* ── SIDEBAR SYNC (Green Sidebar template) ───────────── */
+    const syncSidebar = () => {
+      const set = (id, val) => { if (el(id)) el(id).textContent = val; };
+      set('sb-name',   gVal('fullName')  || 'Your Name');
+      set('sb-role',   gVal('jobTitle')  || 'Job Title');
+      set('sb-email',  '📧 ' + (gVal('email')    || 'your@email.com'));
+      set('sb-phone',  '📱 ' + (gVal('phone')    || '9876543210'));
+      set('sb-loc',    '📍 ' + (gVal('location') || 'City, State'));
+      const skills = gVal('techSkills').split(',').map(s => s.trim()).filter(Boolean).slice(0, 5).join(', ');
+      set('sb-skills', skills || '—');
+      set('sb-degree', gVal('degree')   || '—');
+      set('sb-year',   gVal('gradYear') || '');
+    };
+
+    /* ── TEMPLATE BUTTON WIRING ──────────────────────────── */
+    document.querySelector('.tpl-selector-bar').addEventListener('click', (e) => {
+      const btn = e.target.closest('.tpl-btn');
+      if (!btn) return;
+      document.querySelectorAll('.tpl-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyTemplate(btn.dataset.tpl);
+      if (typeof showToast === 'function') showToast(`Template: ${btn.textContent} ✓`, 'success');
+    });
+
+    /* ── SAVE BUTTON ─────────────────────────────────────── */
+    /* Handled in script.js */
+
+    /* ── PHONE / CHAR COUNTERS ────────────────────────────── */
+    el('phone')?.addEventListener('input', function() {
+      const pos = this.selectionStart;
+      this.value = this.value.replace(/[^\d]/g,'').slice(0,10);
+      try { this.setSelectionRange(pos, pos); } catch(_) {}
+      const err = this.parentElement.querySelector('.err-msg');
+      if (err) {
+        const len = this.value.length;
+        err.textContent = (len > 0 && len < 10) ? `${len}/10 digits entered` : '';
+        err.className   = (len > 0 && len < 10) ? 'err-msg show' : 'err-msg';
+      }
+    });
+
+    el('summary')?.addEventListener('input', function() {
+      const cnt = document.querySelector('.char-count');
+      if (cnt) {
+        cnt.textContent = `${this.value.length}/400 characters`;
+        cnt.style.color = this.value.length > 350 ? '#ea580c' : '#64748b';
+      }
+    });
+
+
+
+    /* ── WIRE ALL FORM INPUTS → sync sidebar ───────── */
+    document.querySelector('.builder-form-col').addEventListener('input', () => {
+      if (TEMPLATES[currentTpl]?.hasSidebar) syncSidebar();
+    });
+
+    /* ── INITIALIZE TEMPLATE ──────────────────────── */
+    window.addEventListener('DOMContentLoaded', () => {
+      // Small delay to ensure script.js has loaded data
+      setTimeout(() => applyTemplate('classic', true), 50);
+    });
+  </script>
+</body>
+</html>
