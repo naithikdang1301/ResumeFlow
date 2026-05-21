@@ -144,3 +144,5 @@ The objective of ResumeFlow is to simplify professional resume creation through 
 
 👨‍💻 Developed By
 Naithik Dang
+Harshit Sharma
+Aseem Jain
